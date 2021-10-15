@@ -6,6 +6,12 @@ require "rails/all"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+# Dev evniornment ENV file
+if defined?(Dotenv)
+    require 'dotenv-rails'
+    Dotenv::Railtie.load
+end
+
 module TheFlyingDutchmen
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
@@ -16,7 +22,11 @@ module TheFlyingDutchmen
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
     #
-    # config.time_zone = "Central Time (US & Canada)"
-    # config.eager_load_paths << Rails.root.join("extras")
+    config.time_zone = 'Tokyo'
+
+    # Load Libraries
+    config.autoload_paths << Rails.root.join("lib")
+    config.eager_load_paths << Rails.root.join("lib")
+
   end
 end
