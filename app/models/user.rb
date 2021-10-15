@@ -7,7 +7,7 @@ class User < ApplicationRecord
   include SimpleDiscussion::ForumUser
 
   def name
-    "#{first_name} #{last_name}"
+    email
   end
 
 end
