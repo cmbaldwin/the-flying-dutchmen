@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.5'
+ruby '3.0.2'
 
 # Set up local .env file, require immediately
 gem 'dotenv-rails', groups: [:development, :test], :require => 'dotenv/rails-now'
