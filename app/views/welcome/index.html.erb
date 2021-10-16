@@ -1,6 +1,10 @@
-<h2>Hello World</h2>
-<p>
-  The time is now: <%= Time.now %>
-</p>
+<div class="container text-center">
+  <%= image_tag("flying_dutchmen.svg", class: 'rounded m-auto', width: '300px') %>
 
-<%= link_to "Forum", simple_discussion_path %>
+  <p>
+    The time is now:<br>
+    <%= Time.zone.now.to_datetime.strftime('%F %T (%:z)') %>
+  </p>
+
+  <%= link_to "Forum", simple_discussion_path %>
+</div>

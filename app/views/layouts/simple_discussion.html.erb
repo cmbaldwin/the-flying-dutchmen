@@ -1,6 +1,6 @@
 <div class="row col-md-12">
   <h1>
-    <%= t('community') %>
+    The Flying Dutchmen Forum
   </h1>
 </div>
 
@@ -8,7 +8,7 @@
   <div class="col-md-3 mb-3">
 
     <div class="card card-body">
-      <%= link_to t('ask_a_question'), simple_discussion.new_forum_thread_path, class: "btn btn-outline-primary btn-block" %>
+      <%= link_to t('start_a_thread'), simple_discussion.new_forum_thread_path, class: "btn btn-outline-primary btn-block" %>
       <hr />
 
       <div class="forum-thread-filters">
@@ -26,7 +26,7 @@
         <% if user_signed_in? %>
           <div>
             <%= forum_link_to simple_discussion.mine_forum_threads_path do %><%= icon "fa-fw far", "user-circle" %>
-              <%= t('.my_questions') %>
+              <%= t('.my_threads') %>
             <% end %>
           </div>
           <div>
@@ -39,13 +39,13 @@
         <div>
           <%= forum_link_to simple_discussion.answered_forum_threads_path do %>
             <%= icon "fa-fw fas", "check" %>
-            <%= t('.answered') %>
+            <%= t('.finshed') %>
           <% end %>
         </div>
         <div>
           <%= forum_link_to simple_discussion.unanswered_forum_threads_path do %>
             <%= icon "fa-fw fas", "question" %>
-            <%= t('.unanswered') %>
+            <%= t('.unfinished') %>
           <% end %>
         </div>
       </div>

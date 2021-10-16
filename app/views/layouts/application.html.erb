@@ -13,10 +13,47 @@
     
   </head>
   <body>
-    <%= yield %>
+    <div class="container">
+
+      <header class="p-3 mb-3 border-bottom">
+          <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+
+              <%= link_to("TFD", root_path , class: 'navbar-brand') %>
+
+              <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <li><%= link_to "Forum", simple_discussion_path, class: 'nav-link active' %></li>
+                <li><a class="nav-link disabled">The Funnel</a></li>
+              </ul>
+
+              <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                <input type="search" class="form-control" placeholder="Search..." aria-label="Search" disabled>
+              </form>
+
+              <div class="dropdown text-end">
+                <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                  👤
+                </a>
+                <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+                  <% if user_signed_in? %>
+                    <li><%= link_to "Profile", edit_user_registration_path, :class => 'dropdown-item' %></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => 'dropdown-item' %></li>
+                  <% else %>  
+                    <li><%= link_to "Login", new_user_session_path, :method => :post, :class => 'dropdown-item'  %></li>
+                    <li><%= link_to "Sign up", new_user_registration_path, :class => 'dropdown-item'  %></li>
+                  <% end %>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </header>
+
+      <%= yield %>
 
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
   </body>
 </html>
