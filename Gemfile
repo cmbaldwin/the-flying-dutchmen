@@ -61,5 +61,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Devise
 gem 'devise'
 
-# Simple Forum
-gem 'simple_discussion'
+# Simple Forum, require our fork of the gem instead of the main gem so we can make modifications
+gem 'simple_discussion', :git => 'git://github.com/cmbaldwin/simple_discussion.git'

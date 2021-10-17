@@ -1,3 +1,13 @@
+GIT
+  remote: git://github.com/cmbaldwin/simple_discussion.git
+  revision: 5976937f105f67445ee289ad5d0099ccea1dfb50
+  specs:
+    simple_discussion (1.3.0)
+      font-awesome-sass (>= 5.13.0)
+      friendly_id (>= 5.2.0)
+      rails (>= 4.2)
+      will_paginate (>= 3.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -185,11 +195,6 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2)
     semantic_range (3.0.0)
-    simple_discussion (1.3.0)
-      font-awesome-sass (>= 5.13.0)
-      friendly_id (>= 5.2.0)
-      rails (>= 4.2)
-      will_paginate (>= 3.1.0)
     spring (3.0.0)
     sprockets (4.0.2)
       concurrent-ruby (~> 1.0)
@@ -247,7 +252,7 @@ DEPENDENCIES
   rails (~> 6.1.4, >= 6.1.4.1)
   sass-rails (>= 6)
   selenium-webdriver
-  simple_discussion
+  simple_discussion!
   spring
   turbolinks (~> 5)
   tzinfo-data
