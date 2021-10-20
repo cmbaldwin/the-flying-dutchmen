@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby 3.0.2
 
-Things you may want to cover:
+* Works on Heroku-20 stack
 
-* Ruby version
+* Rails 6.1.4+, Bundle 2.2.22+, Postgresql, Yarn (latest), FTP ActiveStorage
 
-* System dependencies
+* Currently runs a forked copy of the simple_discussion gem with support for ActiveText and Bootstrap 5. See here: https://github.com/cmbaldwin/simple_discussion/tree/master/app/views/simple_discussion
 
-* Configuration
+* Test suite not implemented currently
 
-* Database creation
+* No services currently implemeneted
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Normal PG database. Once cloned simply run 'bundle install', 'yarn install', 'rails db:create', and 'rails db:migrate'.
