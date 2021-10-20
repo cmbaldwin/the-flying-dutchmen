@@ -23,8 +23,15 @@ default: &default
 
 development:
   <<: *default
-  database: the_flying_dutchmen_development
 
+  # With Heroku if you want to pull and backup a production database for
+  # use with a development enviornment, you can use 
+  # https://dashboard.heroku.com/apps/APP_NAME
+  # click on the database and get the name (i.e. "postgresql-nanchara-666666")
+  # heroku pg:pull postgresql-contoured-13400 NAME_HERE (eg. yyyymmdd_backup)
+  # then just replace the above database with the name you set in NAME_HERE
+  database: the_flying_dutchmen_development
+  
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
