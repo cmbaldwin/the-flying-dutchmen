@@ -58,11 +58,8 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-# FTP for storage
-gem 'active-storage-ftp'
-
 # Devise
 gem 'devise'
 
 # Simple Forum, require our fork of the gem instead of the main gem so we can make modifications
-gem 'simple_discussion', :git => 'https://github.com/cmbaldwin/simple_discussion.git', branch: "master"
+gem 'simple_discussion', :path => 'simple_discussion'

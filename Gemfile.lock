@@ -1,7 +1,5 @@
-GIT
-  remote: https://github.com/cmbaldwin/simple_discussion.git
-  revision: 062f6ea44fd157ca01fb7c2547fdd096da383cc6
-  branch: master
+PATH
+  remote: simple_discussion
   specs:
     simple_discussion (1.3.0)
       font-awesome-sass (>= 5.13.0)
@@ -50,7 +48,6 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.1, >= 1.2.0)
-    active-storage-ftp (0.1.4)
     activejob (6.1.4.1)
       activesupport (= 6.1.4.1)
       globalid (>= 0.3.6)
@@ -241,7 +238,6 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  active-storage-ftp
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)
