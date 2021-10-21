@@ -1,5 +1,5 @@
 PATH
-  remote: ../simple_discussion
+  remote: simple_discussion
   specs:
     simple_discussion (1.3.0)
       font-awesome-sass (>= 5.13.0)
