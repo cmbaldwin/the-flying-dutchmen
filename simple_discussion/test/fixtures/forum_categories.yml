@@ -1,9 +1,0 @@
-general:
-  name: "General"
-  color: "#4ea1d3"
-  slug: general
-
-feedback:
-  name: "Feedback"
-  color: "#16bc9c"
-  slug: feedback
