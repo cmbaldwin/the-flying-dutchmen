@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  include SimpleDiscussion::ForumUser
+  include Fora::ForumUser
 
   def name
     email

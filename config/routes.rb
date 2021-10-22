@@ -4,6 +4,6 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
-  mount SimpleDiscussion::Engine => "/forum"
+  mount Fora::Engine => "/forum"
 
 end
