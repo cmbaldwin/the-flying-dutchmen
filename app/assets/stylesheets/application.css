@@ -12,6 +12,6 @@
  *
  *= require_tree .
  *= require_self
- *= require simple_discussion
+ *= require fora
  *= require trix/dist/trix
  */

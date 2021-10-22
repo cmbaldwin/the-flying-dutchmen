@@ -1,5 +1,7 @@
-PATH
-  remote: ../fora
+GIT
+  remote: https://github.com/cmbaldwin/fora.git
+  revision: 2880b7a4f0c0f731e877ef26f8930f4ae69e4660
+  branch: master
   specs:
     fora (1.3.0)
       font-awesome-sass (>= 5.13.0)
