@@ -62,7 +62,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 
 # Simple Forum, require our fork of the gem instead of the main gem so we can make modifications
-gem 'simple_discussion', :source => 'https://github.com/cmbaldwin/simple_discussion.git' 
+gem 'simple_discussion', :git => 'https://github.com/cmbaldwin/simple_discussion.git', branch: "master"
 
 # Support for Rich Text image processing
 gem 'image_processing', '~> 1.2'
