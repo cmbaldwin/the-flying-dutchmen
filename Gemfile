@@ -65,4 +65,5 @@ gem 'devise'
 gem 'simple_discussion', :git => 'https://github.com/cmbaldwin/simple_discussion.git', branch: "master"
 
 # Support for Rich Text image processing
+gem 'active-storage-ftp'
 gem 'image_processing', '~> 1.2'
