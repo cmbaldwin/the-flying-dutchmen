@@ -1,3 +1,4 @@
+# Uncomment to use carrierwave to gevenerate model attachment uploaders
 # CarrierWave.configure do |config|
 #   config.storage                             = :gcloud
 #   config.gcloud_bucket                       = ENV['GCLOUD_BUCKET']

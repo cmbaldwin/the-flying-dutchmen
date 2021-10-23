@@ -68,6 +68,8 @@ gem 'fora', :git => 'https://github.com/cmbaldwin/fora.git', branch: "master"
 
 # Support for Rich Text image processing
 # # Auto-upload setup for Google
+# # Setup credentials is here: https://devdojo.com/bryanborge/adding-google-cloud-credentials-to-heroku
+# # Cors settings example methods are in lib/google_cloud_bucket_library.rb
 gem "google-cloud-storage", "~> 1.11"
 gem 'active-storage-ftp'
 gem 'image_processing', '~> 1.2'

@@ -1,6 +1,6 @@
 def get_bucket_metadata
   # The ID of your GCS bucket
-  bucket_name = "tld-forum"
+  bucket_name = "NAME_HERE"
 
   require "google/cloud/storage"
 
@@ -41,7 +41,7 @@ end
 
 def cors_configuration
   # The ID of your GCS bucket
-  bucket_name = "tld-forum"
+  bucket_name = "NAME_HERE"
 
   require "google/cloud/storage"
 

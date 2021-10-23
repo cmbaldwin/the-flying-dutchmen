@@ -37,3 +37,4 @@ yarn-debug.log*
 .yarn-integrity
 
 sftp-config.json
+google-credentials.json
