@@ -6,18 +6,11 @@ local:
   service: Disk
   root: <%= Rails.root.join("storage") %>
 
-production:
-  service: FTP
-  host: <%= ENV["FTP_HOST"] %>
-  port: <%= ENV["FTP_PORT"] %>
-  username: <%= ENV["FTP_USERNAME"] %>
-  password: <%= ENV["FTP_PASSWORD"] %>
-  folder: <%= ENV["FTP_FOLDER"] %>
-  url: <%= ENV["FTP_URL"] %>
-  # optional
-  passive: true
-  ssl: false
-  debug_mode: false
+google:
+  service: GCS
+  project: "ENV['GCLOUD_PROJECT']"
+  credentials: <%= Rails.root.join("ENV['GCLOUD_KEYFILE']") %>
+  bucket: "ENV['GCLOUD_BUCKET']"
 
 # Use rails credentials:edit to set the AWS secrets (as aws:access_key_id|secret_access_key)
 # amazon:
