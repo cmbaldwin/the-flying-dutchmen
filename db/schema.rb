@@ -64,7 +64,7 @@ ActiveRecord::Schema.define(version: 2021_10_16_232613) do
   create_table "forum_posts", id: :serial, force: :cascade do |t|
     t.integer "forum_thread_id"
     t.integer "user_id"
-    t.text "body"
+    t.text "rich_text"
     t.boolean "solved", default: false
     t.datetime "created_at"
     t.datetime "updated_at"

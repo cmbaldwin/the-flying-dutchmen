@@ -8,9 +8,10 @@ local:
 
 google:
   service: GCS
-  project: "ENV['GCLOUD_PROJECT']"
-  credentials: <%= Rails.root.join("ENV['GCLOUD_KEYFILE']") %>
-  bucket: "ENV['GCLOUD_BUCKET']"
+  project: <%= ENV["GCLOUD_PROJECT"] %>
+  credentials: <%= Rails.root.join(ENV["GCLOUD_KEYFILE"]) %>
+  bucket: <%= ENV["GCLOUD_BUCKET"] %>
+  public: true
 
 # Use rails credentials:edit to set the AWS secrets (as aws:access_key_id|secret_access_key)
 # amazon:

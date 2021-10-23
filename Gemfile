@@ -67,6 +67,10 @@ gem 'fora', :git => 'https://github.com/cmbaldwin/fora.git', branch: "master"
 #gem 'fora', :path => '~/fora'
 
 # Support for Rich Text image processing
+# Auto-upload setup for Google
+gem 'carrierwave'
+gem 'carrierwave-google-storage'
+gem 'google-api-client'
 gem "google-cloud-storage", "~> 1.11"
 gem 'active-storage-ftp'
 gem 'image_processing', '~> 1.2'
