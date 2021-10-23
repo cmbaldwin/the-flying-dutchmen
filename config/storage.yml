@@ -9,7 +9,7 @@ local:
 google:
   service: GCS
   project: <%= ENV["GCLOUD_PROJECT"] %>
-  credentials: <%= Rails.root.join(ENV["GCLOUD_KEYFILE"]) %>
+  credentials: <% ENV["GOOGLE_APPLICATION_CREDENTIALS"] %>
   bucket: <%= ENV["GCLOUD_BUCKET"] %>
   public: true
 
