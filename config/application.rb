@@ -28,5 +28,8 @@ module TheFlyingDutchmen
     config.autoload_paths << Rails.root.join("lib")
     config.eager_load_paths << Rails.root.join("lib")
 
+    # Set default ActiveStorage to Google in application
+    config.active_storage.service = :google
+
   end
 end
