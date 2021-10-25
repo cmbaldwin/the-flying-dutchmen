@@ -1,5 +1,7 @@
-PATH
-  remote: ../fora
+GIT
+  remote: https://github.com/cmbaldwin/fora.git
+  revision: a19afe032257aaa7fd69a711bdb4294f0b0b0781
+  branch: master
   specs:
     fora (1.0.0)
       bootstrap-icons-helper

@@ -62,10 +62,10 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 
 # Simple Forum, require our fork of the gem instead of the main gem so we can make modifications
-#gem 'fora', :git => 'https://github.com/cmbaldwin/fora.git', branch: "master"
+gem 'fora', :git => 'https://github.com/cmbaldwin/fora.git', branch: "master"
 gem 'bootstrap-icons-helper'
 #Uncomment for Fora dev enviornment, path should be ~/fora (eg. `git clone github.com/cmbaldwin/fora.git ~/`)
-gem 'fora', :path => '~/fora'
+#gem 'fora', :path => '~/fora'
 
 # Support for Rich Text image processing
 # # Auto-upload setup for Google
