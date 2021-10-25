@@ -1,5 +1,5 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'notifications@theflyingdutchmen.net'
+  default from: ENV["FROM_ADDRESS"]
   layout 'mailer'
 
 end
