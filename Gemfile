@@ -62,14 +62,14 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 
 # Simple Forum, require our fork of the gem instead of the main gem so we can make modifications
-gem 'fora', :git => 'https://github.com/cmbaldwin/fora.git', branch: "master"
+#gem 'fora', :git => 'https://github.com/cmbaldwin/fora.git', branch: "master"
 gem 'bootstrap-icons-helper'
 #Uncomment for Fora dev enviornment, path should be ~/fora (eg. `git clone github.com/cmbaldwin/fora.git ~/`)
-#gem 'fora', :path => '~/fora'
+gem 'fora', :path => '~/fora'
 
 # Support for Rich Text image processing
 # # Auto-upload setup for Google
-# # Setup credentials is here: https://devdojo.com/bryanborge/adding-google-cloud-credentials-to-heroku
+# # See here for how to setup credentials: https://devdojo.com/bryanborge/adding-google-cloud-credentials-to-heroku
 # # Cors settings example methods are in lib/google_cloud_bucket_library.rb
 gem "google-cloud-storage", "~> 1.11"
 gem 'active-storage-ftp'
