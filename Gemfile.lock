@@ -1,11 +1,10 @@
-GIT
-  remote: https://github.com/cmbaldwin/fora.git
-  revision: a792ad92d24e3865eefcef08acacd75daa8c1613
-  branch: master
+PATH
+  remote: ../fora
   specs:
-    fora (1.3.0)
+    fora (1.0.0)
+      bootstrap-icons-helper
       friendly_id (>= 5.2.0)
-      rails (>= 4.2)
+      rails (>= 6.1.4.1)
       will_paginate (>= 3.1.0)
 
 GEM
@@ -77,6 +76,11 @@ GEM
     bindex (0.8.1)
     bootsnap (1.9.1)
       msgpack (~> 1.0)
+    bootstrap-icons (1.0.10)
+      nokogiri (~> 1)
+    bootstrap-icons-helper (1.0.10)
+      bootstrap-icons (~> 1)
+      rails (~> 6)
     builder (3.2.4)
     byebug (11.1.3)
     capybara (3.35.3)
@@ -322,6 +326,7 @@ PLATFORMS
 DEPENDENCIES
   active-storage-ftp
   bootsnap (>= 1.4.4)
+  bootstrap-icons-helper
   byebug
   capybara (>= 3.26)
   devise
