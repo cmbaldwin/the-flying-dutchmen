@@ -70,7 +70,7 @@ Rails.application.configure do
     :address        => ENV['MAILGUN_SMTP_SERVER'],
     :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
     :password       => ENV['MAILGUN_SMTP_PASSWORD'],
-    :domain         => ENV['DOMAIN']
+    :domain         => ENV['DOMAIN'],
     :authentication => :plain,
   }
   config.action_mailer.delivery_method = :smtp
