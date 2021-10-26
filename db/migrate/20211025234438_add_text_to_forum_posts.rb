@@ -3,6 +3,6 @@
 # `ForumPost.all.each {|post| p post.body if (post.text.body.nil? && !post.body.nil?)};nil` in console
 class AddTextToForumPosts < ActiveRecord::Migration[6.1]
   def change
-    add_column :forum_posts, :text, :rich_text
+    add_column :forum_posts, :rich_text, :text
   end
 end
