@@ -6,4 +6,8 @@ Rails.application.routes.draw do
 
   mount Fora::Engine => "/forum"
 
+  get '/privacy', to: 'welcome#privacy', as: 'privacy'
+  get '/cookies', to: 'welcome#cookies', as: 'cookies'
+  get '/terms', to: 'welcome#terms', as: 'terms'
+
 end
