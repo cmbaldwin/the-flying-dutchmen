@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/cmbaldwin/fora.git
-  revision: ba646b1bbb9dd66b2efb96849a4adfab0e6ccffc
+  revision: 120ef7900c87bcc5e3e8d59bdb5a763ae238ceb7
   branch: master
   specs:
     fora (1.0.0)
