@@ -1,9 +1,8 @@
 GIT
   remote: https://github.com/cmbaldwin/fora.git
-  revision: 120ef7900c87bcc5e3e8d59bdb5a763ae238ceb7
-  branch: master
+  revision: cca471515fb6a131948a2983d3a9d0fc0e162a8c
   specs:
-    fora (1.0.0)
+    fora (1.0.1)
       bootstrap-icons-helper
       friendly_id (>= 5.2.0)
       rails (>= 6.1.4.1)
@@ -144,9 +143,9 @@ GEM
       retriable (>= 2.0, < 4.a)
       rexml
       webrick
-    google-apis-iamcredentials_v1 (0.7.0)
+    google-apis-iamcredentials_v1 (0.8.0)
       google-apis-core (>= 0.4, < 2.a)
-    google-apis-storage_v1 (0.8.0)
+    google-apis-storage_v1 (0.9.0)
       google-apis-core (>= 0.4, < 2.a)
     google-cloud-core (1.6.0)
       google-cloud-env (~> 1.0)
