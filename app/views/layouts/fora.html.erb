@@ -113,7 +113,10 @@
 <% parent_layout("application") %>
 
 <script>
-  window.scrollTo(0,document.body.scrollHeight);
+  function scrollDown(){
+    window.scrollTo(0,document.body.scrollHeight);
+  }
+  scrollDown();
 
   function topFunction() {
     document.body.scrollTop = 0;
