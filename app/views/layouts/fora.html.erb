@@ -72,7 +72,7 @@
         <%# User has not posted in the thread or subscribed %>
         <h5><%= t('.notifications') %></h5>
 
-        <%= link_to fora.forum_thread_notifications_path(@forum_thread), method: :post, class: "btn btn-secondary btn-sm btn-block mb-2" do %>
+        <%= link_to fora.forum_thread_notifications_path(@forum_thread), method: :post, class: "btn btn-success btn-sm btn-block mb-2" do %>
           <% if @forum_thread.subscribed? current_user %>
             <%= t('.unsubscribe') %>
           <% else %>
@@ -94,7 +94,7 @@
 
     <% if @forum_thread.present? && @forum_thread.persisted? %>
       <hr />
-      <%= link_to fora.forum_thread_notifications_path(@forum_thread), method: :post, class: "btn btn-secondary btn-sm btn-block my-2" do %>
+      <%= link_to fora.forum_thread_notifications_path(@forum_thread), method: :post, class: "btn btn-success btn-sm btn-block my-2" do %>
         <% if @forum_thread.subscribed? current_user %>
           <%= t('.unsubscribe') %>
         <% else %>
@@ -103,9 +103,21 @@
       <% end %>
     <% end %>
 
+    <button class="btn btn-secondary btn-sm btn-block my-2" 
+        onclick="topFunction()" id="topButton" title="Go to top">Top</button>
+
   </div>
 </div>
 
-<script>window.scrollTo(0,document.body.scrollHeight);</script>
 
 <% parent_layout("application") %>
+
+<script>
+  window.scrollTo(0,document.body.scrollHeight);
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
+</script>

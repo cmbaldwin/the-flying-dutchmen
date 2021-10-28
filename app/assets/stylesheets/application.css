@@ -18,12 +18,13 @@
 
  blockquote {
   background: #ebf5ff;
-  border-left: 5px solid #cce5ff !important;
+  border-left: 3px solid #cce5ff !important;
   border-bottom: 1px solid #cce5ff !important;
   margin-top: 1rem;
   padding-left: 1rem;
 }
 blockquote:before{
+  font-family:fantasy;
   font-size: 4rem;
   color: #cce5ff;
   content: open-quote;
@@ -33,13 +34,14 @@ blockquote:before{
   line-height: 1rem;
 }
 blockquote:after{
+  font-family:fantasy;
   content: close-quote;
   color: #aac5ff;
 }
 
 pre {
   background: #eeeeee;
-  border-left: 5px solid #dddddd !important;
+  border-left: 3px solid #dddddd !important;
   border-bottom: 1px solid #dddddd !important;
   margin-top: 1rem;
   padding-top: 0.6rem;
