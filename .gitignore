@@ -38,3 +38,4 @@ yarn-debug.log*
 
 sftp-config.json
 google-credentials.json
+credentials.yml.enc
