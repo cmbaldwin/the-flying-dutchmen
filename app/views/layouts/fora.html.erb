@@ -92,19 +92,21 @@
       <%= yield %>
     </div>
 
-    <% if @forum_thread.present? && @forum_thread.persisted? %>
-      <hr />
-      <%= link_to fora.forum_thread_notifications_path(@forum_thread), method: :post, class: "btn btn-success btn-sm btn-block my-2" do %>
-        <% if @forum_thread.subscribed? current_user %>
-          <%= t('.unsubscribe') %>
-        <% else %>
-          <%= t('.subscribe') %>
-        <% end %>
+      <% if @forum_thread.present? && @forum_thread.persisted? %>
+        <hr />
+        <div class="btn-group">
+          <%= link_to fora.forum_thread_notifications_path(@forum_thread), method: :post, class: "btn btn-success btn-sm my-2" do %>
+            <% if @forum_thread.subscribed? current_user %>
+              <%= t('.unsubscribe') %>
+            <% else %>
+              <%= t('.subscribe') %>
+            <% end %>
+          <% end %>
+        <button class="btn btn-secondary btn-sm my-2" 
+                onclick="topFunction()" id="topButton" title="Go to top">Top</button>
+      </div>
       <% end %>
-    <% end %>
 
-    <button class="btn btn-secondary btn-sm btn-block my-2" 
-        onclick="topFunction()" id="topButton" title="Go to top">Top</button>
 
   </div>
 </div>
