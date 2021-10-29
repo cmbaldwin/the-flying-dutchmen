@@ -24,7 +24,7 @@
   padding-left: 1rem;
 }
 blockquote:before{
-  font-family:fantasy;
+  font-family: fantasy;
   font-size: 4rem;
   color: #cce5ff;
   content: open-quote;
@@ -34,7 +34,7 @@ blockquote:before{
   line-height: 1rem;
 }
 blockquote:after{
-  font-family:fantasy;
+  font-family: fantasy;
   content: close-quote;
   color: #aac5ff;
 }
