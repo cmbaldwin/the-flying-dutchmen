@@ -77,11 +77,8 @@ class ForumThread < ApplicationRecord
     end
   end
 
-  # These are the users to notify on a new thread. Currently this does nothing,
-  # but you can override this to provide whatever functionality you like here.
-  #
-  # For example: You might use this to send all moderators an email of new threads.
+  # Notify all moderators of new thread
   def notify_users
-    []
+    User.where(moderator: true)
   end
 end
