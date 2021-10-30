@@ -65,15 +65,25 @@ Rails.application.configure do
   config.action_mailer.perform_caching = false
 
   # See: https://devcenter.heroku.com/articles/mailgun
-  config.action_mailer.smtp_settings = {
-    :port           => ENV['MAILGUN_SMTP_PORT'],
-    :address        => ENV['MAILGUN_SMTP_SERVER'],
-    :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
-    :password       => ENV['MAILGUN_SMTP_PASSWORD'],
-    :domain         => ENV['DOMAIN'],
-    :authentication => :plain,
-  }
+  # config.action_mailer.smtp_settings = {
+  #   :port           => ENV['MAILGUN_SMTP_PORT'],
+  #   :address        => ENV['MAILGUN_SMTP_SERVER'],
+  #   :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
+  #   :password       => ENV['MAILGUN_SMTP_PASSWORD'],
+  #   :domain         => ENV['DOMAIN'],
+  #   :authentication => :plain,
+  # }
   config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+  :address              => ENV['FLYINGD_SMTP_ADDRESS'],
+  :port                 => ENV['FLYINGD_SMTP_PORT'],
+  :domain               => ENV['FLYINGD_SMTP_DOMAIN'],
+  :user_name            => ENV['FLYINGD_SMTP_USER'],
+  :password             => ENV['FLYINGD_SMTP_PASSWORD'],
+  :authentication       => "plain",
+  :enable_starttls_auto => true, 
+  :openssl_verify_mode  => "none"
+  }
 
   # Missing config for proper url generation, see:
   # https://stackoverflow.com/questions/36131936/missing-host-to-link-to-please-provide-the-host-parameter-for-rails-4

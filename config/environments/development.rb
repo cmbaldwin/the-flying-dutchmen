@@ -14,6 +14,19 @@ Rails.application.configure do
   # Show full error reports.
   config.consider_all_requests_local = true
 
+  # Action Mailer tests
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+  :address              => ENV['FLYINGD_SMTP_ADDRESS'],
+  :port                 => ENV['FLYINGD_SMTP_PORT'],
+  :domain               => ENV['FLYINGD_SMTP_DOMAIN'],
+  :user_name            => ENV['FLYINGD_SMTP_USER'],
+  :password             => ENV['FLYINGD_SMTP_PASSWORD'],
+  :authentication       => "plain",
+  :enable_starttls_auto => true, 
+  :openssl_verify_mode  => "none"
+  }
+
   # As per Devise install
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
