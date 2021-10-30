@@ -73,6 +73,11 @@ Rails.application.configure do
   #   :domain         => ENV['DOMAIN'],
   #   :authentication => :plain,
   # }
+  # 
+  # Using a cPanel hosted smtp server
+  # oddly the port listed on cPanel is 467
+  # but on Rails on 587 works...
+  # see: https://stackoverflow.com/a/22140033/6759431
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
   :address              => ENV['FLYINGD_SMTP_ADDRESS'],

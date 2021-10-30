@@ -9,7 +9,7 @@ class Fora::UserMailer < ApplicationMailer
     @forum_post = forum_thread.forum_posts.first
     @recipient = recipient
 
-    mail(
+    ActionMailer::Base.mail(
       to: "#{@recipient.name} <#{@recipient.email}>",
       subject: @forum_thread.title
     )
@@ -20,7 +20,7 @@ class Fora::UserMailer < ApplicationMailer
     @forum_thread = forum_post.forum_thread
     @recipient = recipient
 
-    mail(
+    ActionMailer::Base.mail(
       to: "#{@recipient.name} <#{@recipient.email}>",
       subject: "New post in #{@forum_thread.title}"
     )
