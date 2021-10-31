@@ -64,6 +64,7 @@ class Fora::ForumThreadsController < Fora::ApplicationController
 
   def set_forum_thread
     @forum_thread = ForumThread.friendly.find(params[:id])
+    @posts = @forum_thread.forum_posts.includes(:user).sorted.paginate(page: page_number)
   end
 
   def forum_thread_params

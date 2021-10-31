@@ -1,6 +1,7 @@
 class ForumPost < ApplicationRecord
   belongs_to :forum_thread, counter_cache: true, touch: true
   belongs_to :user
+  self.per_page = 20
 
   has_rich_text :text
   
