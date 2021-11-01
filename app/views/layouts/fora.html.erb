@@ -106,7 +106,7 @@
           <div class="d-flex">
             <button class="btn btn-outline-primary mb-3 mx-1" 
                     onclick="topFunction()" id="topButton" title="Go to top">↑ <%= t('.top') %></button>
-            <%= will_paginate @posts, url_builder: fora, renderer: Fora::BootstrapLinkRenderer if @posts %>
+            <%= (will_paginate @posts, url_builder: fora, renderer: Fora::BootstrapLinkRenderer) if @posts %>
           </div>
 
           <div>TFD</div>
