@@ -94,17 +94,23 @@
 
       <% if @forum_thread.present? && @forum_thread.persisted? %>
         <hr />
-        <div class="btn-group">
-          <%= link_to fora.forum_thread_notifications_path(@forum_thread), method: :post, class: "btn btn-success btn-sm my-2" do %>
+        <div class="d-flex justify-content-between">
+          <%= link_to fora.forum_thread_notifications_path(@forum_thread), method: :post, class: "btn btn-success mb-3" do %>
             <% if @forum_thread.subscribed? current_user %>
               <%= t('.unsubscribe') %>
             <% else %>
               <%= t('.subscribe') %>
             <% end %>
           <% end %>
-        <button class="btn btn-secondary btn-sm my-2" 
-                onclick="topFunction()" id="topButton" title="Go to top">Top</button>
-      </div>
+
+          <div class="d-flex">
+            <button class="btn btn-outline-primary mb-3 mx-1" 
+                    onclick="topFunction()" id="topButton" title="Go to top">↑ <%= t('.top') %></button>
+            <%= will_paginate @posts, url_builder: fora, renderer: Fora::BootstrapLinkRenderer %>
+          </div>
+
+          <div>TFD</div>
+        </div>
       <% end %>
 
 

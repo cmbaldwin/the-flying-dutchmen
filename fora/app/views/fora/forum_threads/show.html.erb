@@ -22,9 +22,3 @@
 <%= render partial: "fora/forum_posts/forum_post", collection: @posts %>
 
 <%= render partial: "fora/forum_posts/form" if user_signed_in? %>
-
-<hr>
-
-<span class="">
-  <%= will_paginate @posts, url_builder: fora, renderer: Fora::BootstrapLinkRenderer %>
-</span>
