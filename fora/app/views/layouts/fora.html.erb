@@ -1,6 +1,9 @@
+<%# This overwrites the default Fora forum front page %>
+<%= javascript_pack_tag 'fora', 'data-turbolinks-track': 'reload' %>
+
 <div class="row col-md-12">
   <h1>
-    <%= t('community') %>
+    The Flying Dutchmen Forum
   </h1>
 </div>
 
@@ -8,7 +11,7 @@
   <div class="col-md-3 mb-3">
 
     <div class="card card-body">
-      <%= link_to t('ask_a_question'), fora.new_forum_thread_path, class: "btn btn-outline-primary btn-block" %>
+      <%= link_to t('start_a_thread'), fora.new_forum_thread_path, class: "btn btn-outline-primary btn-block" %>
       <hr />
 
       <div class="forum-thread-filters">
@@ -25,7 +28,7 @@
         <% if user_signed_in? %>
           <div>
             <%= forum_link_to fora.mine_forum_threads_path do %>
-              <%= t('.my_questions') %>
+              <%= t('.my_threads') %>
             <% end %>
           </div>
           <div>
@@ -36,12 +39,12 @@
         <% end %>
         <div>
           <%= forum_link_to fora.answered_forum_threads_path do %>
-            <%= t('.answered') %>
+            <%= t('.finshed') %>
           <% end %>
         </div>
         <div>
           <%= forum_link_to fora.unanswered_forum_threads_path do %>
-            <%= t('.unanswered') %>
+            <%= t('.unfinished') %>
           <% end %>
         </div>
       </div>
@@ -54,7 +57,7 @@
             <%= t('.by_category') %>
           </strong>
         </h6>
-        <div><%= forum_link_to fora.forum_threads_path, exact: true do %> All<% end %></div>
+        <div><%= forum_link_to fora.forum_threads_path, exact: true do %>All<% end %></div>
         <% ForumCategory.sorted.each do |category| %>
           <div>
             <%= forum_link_to fora.forum_category_forum_threads_path(category) do %>
@@ -70,8 +73,9 @@
         <%# User has not posted in the thread or subscribed %>
         <h5><%= t('.notifications') %></h5>
 
-        <%= link_to fora.forum_thread_notifications_path(@forum_thread), method: :post, class: "btn btn-secondary btn-sm btn-block mb-2" do %>
+        <%= link_to fora.forum_thread_notifications_path(@forum_thread), method: :post, class: "btn btn-success btn-sm btn-block mb-2" do %>
           <% if @forum_thread.subscribed? current_user %>
+            <%= t('.unsubscribe') %>
           <% else %>
             <%= t('.subscribe') %>
           <% end %>
@@ -89,7 +93,30 @@
       <%= yield %>
     </div>
 
+      <% if @forum_thread.present? && @forum_thread.persisted? %>
+        <hr />
+        <div class="d-flex justify-content-between">
+          <%= link_to fora.forum_thread_notifications_path(@forum_thread), method: :post, class: "btn btn-success mb-3" do %>
+            <% if @forum_thread.subscribed? current_user %>
+              <%= t('.unsubscribe') %>
+            <% else %>
+              <%= t('.subscribe') %>
+            <% end %>
+          <% end %>
+
+          <div class="d-flex">
+            <button class="btn btn-outline-primary mb-3 mx-1" 
+                    onclick="topFunction()" id="topButton" title="Go to top">↑ <%= t('.top') %></button>
+            <%= (will_paginate @posts, url_builder: fora, renderer: Fora::BootstrapLinkRenderer) if @posts %>
+          </div>
+
+          <div>TFD</div>
+        </div>
+      <% end %>
+
+
   </div>
 </div>
+
 
 <% parent_layout("application") %>
