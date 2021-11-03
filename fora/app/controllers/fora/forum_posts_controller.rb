@@ -10,6 +10,7 @@ class Fora::ForumPostsController < Fora::ApplicationController
     @forum_post.user_id = current_user.id
 
     if @forum_post.save
+      @forum_thread.toggle_subscription(current_user)
       Fora::ForumPostNotificationJob.perform_later(@forum_post)
       redirect_to fora.forum_thread_path(@forum_thread, page: get_page_number(@forum_thread, @forum_post), anchor: "forum_post_#{@forum_post.id}")
     else

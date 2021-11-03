@@ -22,10 +22,6 @@ class ForumThread < ApplicationRecord
   scope :unpinned, -> { where.not(pinned: true) }
   scope :unsolved, -> { where.not(solved: true) }
 
-  # def user
-  #   forum_posts.first.user
-  # end
-
   def subscribed_users
     ([user] + optin_subscribers.uniq) - optout_subscribers
   end
