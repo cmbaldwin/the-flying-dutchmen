@@ -4,8 +4,6 @@ module Fora::ForumPostsHelper
     user = User.find_by(email: email)
     if user.avatar.attached?
       image_tag user.avatar.variant(resize: "48x48!"), class: "rounded"
-    else
-      inline_svg_tag('images/flying_dutchmen.svg', class: "rounded")
     end
   end
 
@@ -21,11 +19,11 @@ module Fora::ForumPostsHelper
 
   def get_page_number(forum_thread, forum_post)
     per_page = ForumPost.per_page
-    (forum_thread.forum_posts.index(forum_post) / per_page) + 1
+    (forum_thread.forum_posts.order(:created_at).index(forum_post) / per_page) + 1
   end
 
   def last_post_link(forum_thread)
-    last_post = forum_thread.forum_posts.last
+    last_post = forum_thread.forum_posts.order(:created_at).last
     link_to t('.last_post'), 
         fora.forum_thread_path(forum_thread, 
           page: get_page_number(forum_thread, last_post), 

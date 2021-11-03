@@ -75,5 +75,4 @@ gem "google-cloud-storage", "~> 1.11"
 gem 'active-storage-ftp'
 gem 'file_validators'
 gem 'image_processing', '~> 1.2'
-gem 'inline_svg'
 gem 'imgproxy'
