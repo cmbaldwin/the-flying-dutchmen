@@ -4,14 +4,14 @@
   </div>
 
     <div class="col">
-      <div class="d-flex">
+      <div class="d-flex float-end mt-2 top-thread-nav">
         <% if (@posts && (@posts.length > 3)) %>
             <%= will_paginate @posts, url_builder: fora, renderer: Fora::BootstrapLinkRenderer %>
             <%= last_post_link(@forum_thread) %>
         <% end %>
         <% if is_moderator_or_owner?(@forum_thread) %>
-          <%= link_to bootstrap_icon("pencil", width: 24, height: 24), fora.edit_forum_thread_path(@forum_thread),
-          class: "btn btn-outline-primary mb-3",
+          <%= link_to bootstrap_icon("pencil", width: 18, height: 18), fora.edit_forum_thread_path(@forum_thread),
+          class: "btn btn-sm btn-outline-primary mb-3",
           data: { toggle: "tooltip", placement: "left" },
           title: t('edit_this_thread') %>
         <% end %>

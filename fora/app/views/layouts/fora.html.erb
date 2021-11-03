@@ -1,4 +1,4 @@
-<%# This overwrites the default Fora forum front page %>
+<%# Below files are located in webpacker, they are there to be compiled for efficency, and the lines below are required %>
 <%= javascript_pack_tag 'fora', 'data-turbolinks-track': 'reload' %>
 <%= stylesheet_pack_tag 'fora', media: 'all', 'data-turbolinks-track': 'reload' %>
 
@@ -105,7 +105,7 @@
             <% end %>
           <% end %>
 
-          <% if (@posts && (@posts.length > 3)) %>
+          <% if (@forum_thread.forum_posts.length > 3) %>
             <div class="d-flex">
               <%= link_to t('.top'), '#', data: {top: 'JavaScript'}, id: 'topButton', title: t('.go_to_top'), class: "btn btn-outline-primary mb-3 mx-1" %>
               <%= (will_paginate @posts, url_builder: fora, renderer: Fora::BootstrapLinkRenderer) %>

@@ -29,7 +29,7 @@ module Fora::ForumPostsHelper
           page: get_page_number(forum_thread, last_post), 
           anchor: "forum_post_#{last_post.id}"), 
         title: t('.skip_to_last_post'), 
-        class: "btn btn-outline-primary mb-3 mx-1"
+        class: "btn btn-sm btn-outline-primary mb-3 mx-1"
   end
 
   def forum_post_classes(forum_post)

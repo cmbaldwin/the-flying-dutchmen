@@ -3,6 +3,12 @@
   display: inline-block;
 }
 
+.top-thread-nav {
+  .page-link {
+    padding: 0.2rem 0.5rem;
+  }
+}
+
 /* Highlight the active navigation item in the sidebar */
 .forum-thread-filters {
   a {
