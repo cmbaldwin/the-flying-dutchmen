@@ -73,9 +73,7 @@ gem 'bootstrap-icons-helper'
 # # Cors settings example methods are in lib/google_cloud_bucket_library.rb
 gem "google-cloud-storage", "~> 1.11"
 gem 'active-storage-ftp'
+gem 'file_validators'
 gem 'image_processing', '~> 1.2'
-
-# Carrierwave if wanting to add custom attachments to models later
-# gem 'carrierwave'
-# gem 'carrierwave-google-storage'
-# gem 'google-api-client'
+gem 'inline_svg'
+gem 'imgproxy'

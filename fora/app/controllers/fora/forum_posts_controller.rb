@@ -11,7 +11,7 @@ class Fora::ForumPostsController < Fora::ApplicationController
 
     if @forum_post.save
       Fora::ForumPostNotificationJob.perform_later(@forum_post)
-      redirect_to fora.forum_thread_path(@forum_thread, anchor: "forum_post_#{@forum_post.id}")
+      redirect_to fora.forum_thread_path(@forum_thread, page: get_page_number(@forum_thread, @forum_post), anchor: "forum_post_#{@forum_post.id}")
     else
       render template: "fora/forum_threads/show"
     end
@@ -22,7 +22,7 @@ class Fora::ForumPostsController < Fora::ApplicationController
 
   def update
     if @forum_post.update(forum_post_params)
-      redirect_to fora.forum_thread_path(@forum_thread)
+      redirect_to fora.forum_thread_path(@forum_thread, page: get_page_number(@forum_thread, @forum_post), anchor: ActionView::RecordIdentifier.dom_id(@forum_post))
     else
       render action: :edit
     end
@@ -40,7 +40,7 @@ class Fora::ForumPostsController < Fora::ApplicationController
     @forum_post.update_column(:solved, true)
     @forum_thread.update_column(:solved, true)
 
-    redirect_to fora.forum_thread_path(@forum_thread, anchor: ActionView::RecordIdentifier.dom_id(@forum_post))
+    redirect_to fora.forum_thread_path(@forum_thread, page: get_page_number(@forum_thread, @forum_post), anchor: ActionView::RecordIdentifier.dom_id(@forum_post))
   end
 
   def unsolved
@@ -49,7 +49,7 @@ class Fora::ForumPostsController < Fora::ApplicationController
     @forum_thread.forum_posts.update_all(solved: false)
     @forum_thread.update_column(:solved, false)
 
-    redirect_to fora.forum_thread_path(@forum_thread, anchor: ActionView::RecordIdentifier.dom_id(@forum_post))
+    redirect_to fora.forum_thread_path(@forum_thread, page: get_page_number(@forum_thread, @forum_post), anchor: ActionView::RecordIdentifier.dom_id(@forum_post))
   end
 
   private

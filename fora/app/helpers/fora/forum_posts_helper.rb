@@ -1,7 +1,12 @@
 module Fora::ForumPostsHelper
   # Override this to use avatars from other places than Gravatar
   def avatar_tag(email)
-    image_tag gravatar_url_for(email, size: 40), class: "rounded avatar"
+    user = User.find_by(email: email)
+    if user.avatar.attached?
+      image_tag user.avatar.variant(resize: "48x48!"), class: "rounded"
+    else
+      inline_svg_tag('images/flying_dutchmen.svg', class: "rounded")
+    end
   end
 
   def category_link(category)
@@ -12,6 +17,21 @@ module Fora::ForumPostsHelper
   # Override this method to provide your own content formatting like Markdown
   def formatted_content(text)
     text
+  end
+
+  def get_page_number(forum_thread, forum_post)
+    per_page = ForumPost.per_page
+    (forum_thread.forum_posts.index(forum_post) / per_page) + 1
+  end
+
+  def last_post_link(forum_thread)
+    last_post = forum_thread.forum_posts.last
+    link_to t('.last_post'), 
+        fora.forum_thread_path(forum_thread, 
+          page: get_page_number(forum_thread, last_post), 
+          anchor: "forum_post_#{last_post.id}"), 
+        title: t('.skip_to_last_post'), 
+        class: "btn btn-outline-primary mb-3 mx-1"
   end
 
   def forum_post_classes(forum_post)
@@ -27,9 +47,4 @@ module Fora::ForumPostsHelper
     end
   end
 
-  def gravatar_url_for(email, **options)
-    hash = Digest::MD5.hexdigest(email&.downcase || "")
-    options.reverse_merge!(default: :mp, rating: :pg, size: 48)
-    "https://secure.gravatar.com/avatar/#{hash}.png?#{options.to_param}"
-  end
 end

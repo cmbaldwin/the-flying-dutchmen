@@ -104,11 +104,12 @@
             <% end %>
           <% end %>
 
-          <div class="d-flex">
-            <button class="btn btn-outline-primary mb-3 mx-1" 
-                    onclick="topFunction()" id="topButton" title="Go to top">↑ <%= t('.top') %></button>
-            <%= (will_paginate @posts, url_builder: fora, renderer: Fora::BootstrapLinkRenderer) if @posts %>
-          </div>
+          <% if (@posts && (@posts.length > 3)) %>
+            <div class="d-flex">
+              <%= link_to t('.top'), '#', data: {top: 'JavaScript'}, id: 'topButton', title: t('.go_to_top'), class: "btn btn-outline-primary mb-3 mx-1" %>
+              <%= (will_paginate @posts, url_builder: fora, renderer: Fora::BootstrapLinkRenderer) %>
+            </div>
+          <% end %>
 
           <div>TFD</div>
         </div>

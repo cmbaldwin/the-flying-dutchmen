@@ -38,6 +38,9 @@ en:
   saving_comment: Saving comment...
   saving: Saving
   this_solved_my_question: This solved my question
+  pin_this_post: Pin this post
+  pinned: Pinned
+  last_update: Last Updated
   title: title
   what_help_needed: What do you need help with?
   ask_your_question: Ask Your Question
@@ -48,3 +51,6 @@ en:
   latest_questions: the latest questions
   instead: instead?
   top: Top
+  go_to_top: Go to Top
+  skip_to_last_post: Skip to Last Post
+  last_post: Last Post

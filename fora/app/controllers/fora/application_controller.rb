@@ -15,6 +15,11 @@ class Fora::ApplicationController < ::ApplicationController
     page
   end
 
+  def get_page_number(forum_thread, forum_post)
+    per_page = ForumPost.per_page
+    (forum_thread.forum_posts.index(forum_post) / per_page) + 1
+  end
+
   def is_moderator_or_owner?(object)
     is_moderator? || object.user == current_user
   end

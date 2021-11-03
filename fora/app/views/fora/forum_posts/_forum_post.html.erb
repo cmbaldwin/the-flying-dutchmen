@@ -39,26 +39,40 @@
 
   <% if @forum_thread.solved? && forum_post.solved? %>
     <div class="card-footer">
-      <div class="pull-right">
-        <strong class="text-success"><%= bootstrap_icon "check", width: 21, height: 21, class: 'text-success' %> <%= t('solved') %></strong>
-
+      <div class="w-50 float-start">
         <% if is_moderator_or_owner?(@forum_thread) %>
           <small>
-            <%= link_to t('undo'), fora.unsolved_forum_thread_forum_post_path(@forum_thread, forum_post), method: :put %>
+            <%= link_to(fora.unsolved_forum_thread_forum_post_path(@forum_thread, forum_post), method: :put) do %>
+              <strong class="text-info"><%= bootstrap_icon "pin-angle", width: 15, height: 15, class: 'text-info' %> <%= t('pinned') %></strong>
+            <% end %>
           </small>
+        <% else %>
+          <strong class="text-info"><%= bootstrap_icon "pin-angle", width: 15, height: 15, class: 'text-info' %> <%= t('pinned') %></strong>
         <% end %>
+      </div>
+      <div class="w-50 float-end text-secondary text-end">
+        <small>
+          <%= t('last_updated') %>: <%= forum_post.updated_at %>
+        </small>
       </div>
     </div>
 
   <% elsif is_moderator_or_owner?(@forum_thread) %>
     <div class="card-footer">
-      <div class="pull-right">
-        <small>
-          <%= link_to fora.solved_forum_thread_forum_post_path(@forum_thread, forum_post), method: :put do %>
-            check
-            <%= t('this_solved_my_question') %>
-          <% end %>
-        </small>
+      <div class="row">
+        <div class="col float-start">
+          <small>
+            <%= link_to fora.solved_forum_thread_forum_post_path(@forum_thread, forum_post), method: :put do %>
+              <%= bootstrap_icon "pin", width: 15, height: 15, class: 'text-secondary' %>
+              <%= t('pin_this_post') %>
+            <% end %>
+          </small>
+        </div>
+        <div class="col float-end text-secondary text-end">
+          <small>
+            <%= t('last_update') %>: <%= forum_post.updated_at %>
+          </small>
+        </div>
       </div>
     </div>
   <% end %>
