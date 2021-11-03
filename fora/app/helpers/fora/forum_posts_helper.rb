@@ -3,7 +3,7 @@ module Fora::ForumPostsHelper
   def avatar_tag(email)
     user = User.find_by(email: email)
     if user.avatar.attached?
-      image_tag user.avatar.variant(resize: "48x48!"), class: "rounded"
+      image_tag user.avatar.variant(resize: "48x48!"), class: "rounded img-fluid"
     end
   end
 

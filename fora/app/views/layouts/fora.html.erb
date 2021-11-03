@@ -29,23 +29,23 @@
         <% if user_signed_in? %>
           <div>
             <%= forum_link_to fora.mine_forum_threads_path do %>
-              <%= t('.my_threads') %>
+              <%= bootstrap_icon('list-ol') %> <%= t('.my_threads') %>
             <% end %>
           </div>
           <div>
             <%= forum_link_to fora.participating_forum_threads_path do %>
-              <%= t('.participating') %>
+              <%= bootstrap_icon('list-stars') %> <%= t('.participating') %>
             <% end %>
           </div>
         <% end %>
         <div>
           <%= forum_link_to fora.answered_forum_threads_path do %>
-            <%= t('.finshed') %>
+            <%= bootstrap_icon('list-check') %> <%= t('.finshed') %>
           <% end %>
         </div>
         <div>
           <%= forum_link_to fora.unanswered_forum_threads_path do %>
-            <%= t('.unfinished') %>
+            <%= bootstrap_icon('list-task') %> <%= t('.unfinished') %>
           <% end %>
         </div>
       </div>
@@ -62,7 +62,7 @@
         <% ForumCategory.sorted.each do |category| %>
           <div>
             <%= forum_link_to fora.forum_category_forum_threads_path(category) do %>
-              <%= category.name %>
+              <%= bootstrap_icon('circle-fill', fill: category.color) %> <%= category.name %>
             <% end %>
           </div>
         <% end %>
