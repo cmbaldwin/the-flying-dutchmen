@@ -105,7 +105,7 @@
             <% end %>
           <% end %>
 
-          <% if (@forum_thread.forum_posts.length > 3) %>
+          <% if (@posts) && (@forum_thread.forum_posts.length > 3) %>
             <div class="d-flex">
               <%= link_to t('.top'), '#', data: {top: 'JavaScript'}, id: 'topButton', title: t('.go_to_top'), class: "btn btn-outline-primary mb-3 mx-1" %>
               <%= (will_paginate @posts, url_builder: fora, renderer: Fora::BootstrapLinkRenderer) %>
