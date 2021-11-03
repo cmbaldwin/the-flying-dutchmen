@@ -23,7 +23,7 @@
         </h5>
         <div>
           <%= forum_link_to fora.forum_threads_path, exact: true do %>
-            <%= t('.all_threads') %>
+            <%= bootstrap_icon('list') %> <%= t('.all_threads') %>
           <% end %>
         </div>
         <% if user_signed_in? %>

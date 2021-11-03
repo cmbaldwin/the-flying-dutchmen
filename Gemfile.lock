@@ -180,9 +180,6 @@ GEM
       ruby-vips (>= 2.0.17, < 3)
     imgproxy (2.0.1)
       anyway_config (>= 2.0.0)
-    inline_svg (1.7.2)
-      activesupport (>= 3.0)
-      nokogiri (>= 1.6)
     jbuilder (2.11.2)
       activesupport (>= 5.0.0)
     jwt (2.3.0)
@@ -353,7 +350,6 @@ DEPENDENCIES
   google-cloud-storage (~> 1.11)
   image_processing (~> 1.2)
   imgproxy
-  inline_svg
   jbuilder (~> 2.7)
   listen (~> 3.3)
   pg (~> 1.1)
