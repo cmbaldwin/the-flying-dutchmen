@@ -20,7 +20,12 @@
         <div class="thread-details">
           <strong><%= category_link(forum_thread.forum_category) %></strong>
           • <%= t('asked_time_ago', time: time_ago_in_words(forum_thread.created_at), author: forum_thread.user.name) %>
-          • <%= link_to t('time_since_last_post', time: time_ago_in_words(forum_thread.last_post.created_at), author: forum_thread.last_post.user.name), last_post_link(forum_thread), class: "link-secondary" %>
+          • <%= link_to fora.forum_thread_path(forum_thread, 
+                page: get_page_number(forum_thread, forum_thread.last_post), 
+                anchor: "forum_post_#{forum_thread.last_post.id}"), 
+              class: "link-secondary" do %>
+            <%= t('time_since_last_post', time: time_ago_in_words(forum_thread.last_post.created_at), author: forum_thread.last_post.user.name) %>
+          <% end %>
         </div>
 
         <p class="text-muted"><%= truncate(forum_thread.forum_posts.first.text.to_plain_text, length: 200) unless forum_thread.forum_posts.first.nil? %></p>
