@@ -21,7 +21,12 @@ class Fora::ApplicationController < ::ApplicationController
   end
 
   def is_moderator_or_owner?(object)
-    is_moderator? || object.user == current_user
+    # if thread owner is a moderator, revert to owner only
+    if object.user.respond_to?(:moderator)
+      object.user == current_user
+    else
+      is_moderator? || object.user == current_user
+    end
   end
   helper_method :is_moderator_or_owner?
 

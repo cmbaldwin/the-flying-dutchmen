@@ -31,7 +31,7 @@ module Fora::ForumPostsHelper
   end
 
   def last_post_link(forum_thread)
-    last_post = forum_thread.forum_posts.order(:created_at).last
+    last_post = forum_thread.last_post
     link_to t('.last_post'), 
         fora.forum_thread_path(forum_thread, 
           page: get_page_number(forum_thread, last_post), 
