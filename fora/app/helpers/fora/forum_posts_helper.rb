@@ -14,7 +14,15 @@ module Fora::ForumPostsHelper
 
   # Override this method to provide your own content formatting like Markdown
   def formatted_content(text)
-    text
+    if current_user.new_window
+      formatted_text = Nokogiri::HTML(text.body.to_rendered_html_with_layout)
+      formatted_text.css("a").each do |link|
+        link['target'] = '_blank'
+      end
+      formatted_text.to_html.html_safe
+    else
+      text
+    end
   end
 
   def get_page_number(forum_thread, forum_post)
