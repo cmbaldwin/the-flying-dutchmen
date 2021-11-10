@@ -1,6 +1,6 @@
 document.addEventListener("turbolinks:load", function() {
 
-  https://stackoverflow.com/questions/63328755/how-do-i-make-a-javascript-function-available-globally-in-rails-6-with-webpack
+  // https://stackoverflow.com/questions/63328755/how-do-i-make-a-javascript-function-available-globally-in-rails-6-with-webpack
   document.querySelectorAll('[data-top]').forEach(function(top_link) {
     top_link.addEventListener('click', function(event) {
       let name = top_link.dataset['top']

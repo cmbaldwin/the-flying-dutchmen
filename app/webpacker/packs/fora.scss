@@ -4,7 +4,7 @@ blockquote {
   background: #ebf5ff;
   border-left: 3px solid #cce5ff !important;
   border-bottom: 1px solid #cce5ff !important;
-  margin-top: 1rem;
+  margin-top: 2rem;
   padding-left: 1rem;
 }
 blockquote:before{
@@ -27,11 +27,12 @@ pre {
   background: #eeeeee;
   border-left: 3px solid #dddddd !important;
   border-bottom: 1px solid #dddddd !important;
-  margin-top: 1rem;
+  margin-top: 2rem;
   padding-top: 0.6rem;
   padding-bottom: 0.6rem;
   padding-left: 1.4rem;
   padding-right: 1rem;
+  min-height: 3.5rem;
 }
 pre:before{
   font-size: 3.5rem;
