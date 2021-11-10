@@ -11,6 +11,8 @@ class Fora::ForumPostsController < Fora::ApplicationController
 
     if @forum_post.save
       @forum_thread.toggle_subscription(current_user)
+      # Just run the toggler again, to create a subscription if the user has set the setting to auto-subcribe.
+      @forum_thread.toggle_subscription(current_user) if current_user.auto_subscribe
       Fora::ForumPostNotificationJob.perform_later(@forum_post)
       redirect_to fora.forum_thread_path(@forum_thread, page: get_page_number(@forum_thread, @forum_post), anchor: "forum_post_#{@forum_post.id}")
     else

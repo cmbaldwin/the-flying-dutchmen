@@ -5,7 +5,8 @@ en:
   start_a_discussion: Start A Discussion
   add_a_comment: Add A Comment
   ask_a_question: Ask A Question
-  asked_time_ago: "Asked %{time} ago by %{author}"
+  asked_time_ago: "Created %{time} ago by %{author}"
+  time_since_last_post: "Last post: %{time} ago by %{author}"
   choose_a_category: Choose a Category
   comment: Comment
   commented_on: Commented on
@@ -37,7 +38,8 @@ en:
   receiving_notifications_because_posted: You're receiving notifications because you've posted in this thread.
   saving_comment: Saving comment...
   saving: Saving
-  this_solved_my_question: This solved my question
+  this_concluded_the_thread: This post concluded the thread
+  conclude_thread: Conclude thread
   pin_this_post: Pin this post
   pinned: Pinned
   last_update: Last Updated

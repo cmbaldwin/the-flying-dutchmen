@@ -28,7 +28,7 @@
       </strong>
       <small>
         <%= t('commented_on') %>
-        <%= link_to forum_post.created_at.strftime("%b %d, %Y"), fora.forum_thread_path(@forum_thread, anchor: "forum_post_#{forum_post.id}") %>:
+        <%= link_to forum_post.created_at.strftime("%b %d, %Y"), fora.forum_thread_path(@forum_thread, page: get_page_number(@forum_thread, forum_post), anchor: "forum_post_#{forum_post.id}") %>:
       </small>
     </div>
   </div>
@@ -43,11 +43,17 @@
         <% if is_moderator_or_owner?(@forum_thread) %>
           <small>
             <%= link_to(fora.unsolved_forum_thread_forum_post_path(@forum_thread, forum_post), method: :put) do %>
-              <strong class="text-info"><%= bootstrap_icon "pin-angle", width: 15, height: 15, class: 'text-info' %> <%= t('pinned') %></strong>
+              <strong class="text-info">
+                <%= bootstrap_icon "check2-circle", width: 15, height: 15, class: 'text-info me-2' %>
+                <%= t('this_concluded_the_thread') %>    
+              </strong>
             <% end %>
           </small>
         <% else %>
-          <strong class="text-info"><%= bootstrap_icon "pin-angle", width: 15, height: 15, class: 'text-info' %> <%= t('pinned') %></strong>
+          <strong class="text-info">
+            <%= bootstrap_icon "check2-circle", width: 15, height: 15, class: 'text-info me-2' %>
+            <%= t('this_concluded_the_thread') %>
+          </strong>
         <% end %>
       </div>
       <div class="w-50 float-end text-secondary text-end">
@@ -63,10 +69,10 @@
         <div class="col float-start">
           <small>
             <%= link_to fora.solved_forum_thread_forum_post_path(@forum_thread, forum_post), method: :put do %>
-              <%= bootstrap_icon "pin", width: 15, height: 15, class: 'text-secondary' %>
-              <%= t('pin_this_post') %>
+              <%= bootstrap_icon "circle", width: 15, height: 15, class: 'text-secondary me-2' %><%= t('conclude_thread') %>
             <% end %>
           </small>
+          <%# t('pin_this_post') %>
         </div>
         <div class="col float-end text-secondary text-end">
           <small>

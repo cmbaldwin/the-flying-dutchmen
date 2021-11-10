@@ -73,6 +73,10 @@ class ForumThread < ApplicationRecord
     end
   end
 
+  def last_post
+    forum_posts.order(:created_at).last
+  end
+
   # Notify all moderators of new thread
   def notify_users
     User.where(moderator: true)
