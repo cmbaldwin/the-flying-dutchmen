@@ -136,7 +136,8 @@ GEM
       faraday-net_http (>= 2.0, < 3.2)
     faraday-net_http (3.1.0)
       net-http
-    ffi (1.16.3)
+    ffi (1.17.0)
+    ffi (1.17.0-x86_64-linux-gnu)
     file_validators (3.0.0)
       activemodel (>= 3.2)
       mime-types (>= 1.0)
@@ -154,7 +155,7 @@ GEM
       rexml
     google-apis-iamcredentials_v1 (0.21.0)
       google-apis-core (>= 0.15.0, < 2.a)
-    google-apis-storage_v1 (0.38.0)
+    google-apis-storage_v1 (0.39.0)
       google-apis-core (>= 0.15.0, < 2.a)
     google-cloud-core (1.7.0)
       google-cloud-env (>= 1.0, < 3.a)
@@ -363,7 +364,7 @@ GEM
       faraday (>= 0.17.5, < 3.a)
       jwt (>= 1.5, < 3.0)
       multi_json (~> 1.10)
-    sorbet-runtime (0.5.11357)
+    sorbet-runtime (0.5.11406)
     spring (4.2.1)
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
