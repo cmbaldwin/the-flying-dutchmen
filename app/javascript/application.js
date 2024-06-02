@@ -12,5 +12,8 @@ import "@popperjs/core"
 import "bootstrap"
 import * as bootstrap from "bootstrap"
 
-require("trix")
-require("@rails/actiontext")
+// Trix
+import "trix"
+
+// Fora
+import 'fora';

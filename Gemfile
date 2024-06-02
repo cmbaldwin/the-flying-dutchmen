@@ -16,6 +16,7 @@ gem 'puma'
 gem 'cssbundling-rails'
 gem 'rack-cache'
 gem 'sassc-rails'
+gem 'sprockets-rails'
 # Importmaps
 gem 'importmap-rails'
 # Stimulus
@@ -24,6 +25,7 @@ gem 'stimulus-rails'
 gem 'turbo-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
