@@ -79,7 +79,7 @@ gem 'will_paginate'
 # # Auto-upload setup for Google
 # # See here for how to setup credentials: https://devdojo.com/bryanborge/adding-google-cloud-credentials-to-heroku
 # # Cors settings example methods are in lib/google_cloud_bucket_library.rb
-gem 'google-cloud-storage', '~> 1.11'
+gem 'google-cloud-storage', '1.37.0'
 # gem 'active-storage-ftp'
 gem 'file_validators'
 gem 'image_processing', '~> 1.2'

@@ -163,14 +163,13 @@ GEM
     google-cloud-env (2.1.1)
       faraday (>= 1.0, < 3.a)
     google-cloud-errors (1.4.0)
-    google-cloud-storage (1.52.0)
+    google-cloud-storage (1.37.0)
       addressable (~> 2.8)
       digest-crc (~> 0.4)
-      google-apis-core (~> 0.13)
-      google-apis-iamcredentials_v1 (~> 0.18)
-      google-apis-storage_v1 (~> 0.38)
+      google-apis-iamcredentials_v1 (~> 0.1)
+      google-apis-storage_v1 (~> 0.1)
       google-cloud-core (~> 1.6)
-      googleauth (~> 1.9)
+      googleauth (>= 0.16.2, < 2.a)
       mini_mime (~> 1.0)
     googleauth (1.11.0)
       faraday (>= 1.0, < 3.a)
@@ -426,7 +425,7 @@ DEPENDENCIES
   file_validators
   fora!
   friendly_id
-  google-cloud-storage (~> 1.11)
+  google-cloud-storage (= 1.37.0)
   image_processing (~> 1.2)
   imgproxy
   importmap-rails
