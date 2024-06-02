@@ -1,0 +1,2 @@
+web: env RUBY_DEBUG_OPEN=true bin/rails server -b 192.168.11.5
+css: yarn watch:css
