@@ -21,6 +21,6 @@ class User < ApplicationRecord
   end
 
   def new_window
-    settings&.dig('new_window').to_i.zero? || false
+    settings&.dig('new_window')&.to_i&.zero? || false
   end
 end

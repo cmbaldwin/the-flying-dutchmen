@@ -28,9 +28,9 @@ development:
   # use with a development enviornment, you can use
   # https://dashboard.heroku.com/apps/APP_NAME
   # click on the database and get the name (i.e. "postgresql-nanchara-666666")
-  # heroku pg:pull postgresql-nanchara-666666 NAME_HERE (eg. yyyymmdd_backup)
+  # heroku pg:pull postgresql-nanchara-777 NAME_HERE (eg. tfd-development)
   # then just replace the above database with the name you set in NAME_HERE
-  database: d65gb4at8pnsfr
+  database: tfd-development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
