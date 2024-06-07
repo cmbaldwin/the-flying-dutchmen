@@ -16,6 +16,11 @@ en:
   edit_this_thread: Edit this thread
   edit_thread: Edit thread
   filters: Filters
+  fora:
+    forum_threads:
+      show:
+        last_post: Last Post
+        skip_to_last_post: Skip to Last Post
   how_do_i: How do I...?
   ignoring_thread: You're ignoring this thread.
   not_receiving_notifications: You’re not receiving notifications from this thread.
