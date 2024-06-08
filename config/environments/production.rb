@@ -1,4 +1,4 @@
-require "active_support/core_ext/integer/time"
+require 'active_support/core_ext/integer/time'
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
@@ -53,7 +53,7 @@ Rails.application.configure do
   config.log_level = :info
 
   # Prepend all log lines with the following tags.
-  config.log_tags = [ :request_id ]
+  config.log_tags = [:request_id]
 
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
@@ -73,26 +73,26 @@ Rails.application.configure do
   #   :domain         => ENV['DOMAIN'],
   #   :authentication => :plain,
   # }
-  # 
+  #
   # Using a cPanel hosted smtp server
   # oddly the port listed on cPanel is 467
   # but on Rails on 587 works...
   # see: https://stackoverflow.com/a/22140033/6759431
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-  :address              => ENV['FLYINGD_SMTP_ADDRESS'],
-  :port                 => ENV['FLYINGD_SMTP_PORT'],
-  :domain               => ENV['FLYINGD_SMTP_DOMAIN'],
-  :user_name            => ENV['FLYINGD_SMTP_USER'],
-  :password             => ENV['FLYINGD_SMTP_PASSWORD'],
-  :authentication       => "plain",
-  :enable_starttls_auto => true, 
-  :openssl_verify_mode  => "none"
+    address: ENV.fetch('FLYINGD_SMTP_ADDRESS', nil),
+    port: ENV.fetch('FLYINGD_SMTP_PORT', nil),
+    domain: ENV.fetch('FLYINGD_SMTP_DOMAIN', nil),
+    user_name: ENV.fetch('FLYINGD_SMTP_USER', nil),
+    password: ENV.fetch('FLYINGD_SMTP_PASSWORD', nil),
+    authentication: 'plain',
+    enable_starttls_auto: true,
+    openssl_verify_mode: 'none'
   }
 
   # Missing config for proper url generation, see:
   # https://stackoverflow.com/questions/36131936/missing-host-to-link-to-please-provide-the-host-parameter-for-rails-4
-  config.action_mailer.default_url_options = { host: ENV['DOMAIN'] }
+  config.action_mailer.default_url_options = { host: ENV.fetch('DOMAIN', nil) }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
@@ -112,13 +112,13 @@ Rails.application.configure do
   config.active_support.disallowed_deprecation_warnings = []
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
-  config.log_formatter = ::Logger::Formatter.new
+  config.log_formatter = Logger::Formatter.new
 
   # Use a different logger for distributed setups.
   # require "syslog/logger"
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
 
-  if ENV["RAILS_LOG_TO_STDOUT"].present?
+  if ENV['RAILS_LOG_TO_STDOUT'].present?
     logger           = ActiveSupport::Logger.new(STDOUT)
     logger.formatter = config.log_formatter
     config.logger    = ActiveSupport::TaggedLogging.new(logger)

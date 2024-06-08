@@ -3,7 +3,7 @@
 
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     
-    <div class="d-flex flex-column justify-content-center align-items-center align-middle mb-2">
+    <div class="d-flex gap-2 flex-column justify-content-center align-items-center align-middle mb-2">
       <div class="field">
         <%= f.label :email, class: 'form-label' %><br />
         <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
@@ -15,7 +15,7 @@
       </div>
 
       <% if devise_mapping.rememberable? %>
-        <div class="form-check mt-2">
+        <div class="form-check">
           <%= f.check_box :remember_me, class: 'form-check-input' %>
           <%= f.label :remember_me, class: 'form-check-label' %>
         </div>
