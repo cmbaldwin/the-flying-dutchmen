@@ -1,4 +1,4 @@
-require "active_support/core_ext/integer/time"
+require 'active_support/core_ext/integer/time'
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
@@ -17,14 +17,14 @@ Rails.application.configure do
   # Action Mailer tests
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-  :address              => ENV['FLYINGD_SMTP_ADDRESS'],
-  :port                 => ENV['FLYINGD_SMTP_PORT'],
-  :domain               => ENV['FLYINGD_SMTP_DOMAIN'],
-  :user_name            => ENV['FLYINGD_SMTP_USER'],
-  :password             => ENV['FLYINGD_SMTP_PASSWORD'],
-  :authentication       => "plain",
-  :enable_starttls_auto => true, 
-  :openssl_verify_mode  => "none"
+    address: ENV.fetch('FLYINGD_SMTP_ADDRESS', nil),
+    port: ENV.fetch('FLYINGD_SMTP_PORT', nil),
+    domain: ENV.fetch('FLYINGD_SMTP_DOMAIN', nil),
+    user_name: ENV.fetch('FLYINGD_SMTP_USER', nil),
+    password: ENV.fetch('FLYINGD_SMTP_PASSWORD', nil),
+    authentication: 'plain',
+    enable_starttls_auto: true,
+    openssl_verify_mode: 'none'
   }
 
   # As per Devise install

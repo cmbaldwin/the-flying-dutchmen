@@ -14,7 +14,10 @@
         <%= link_to bootstrap_icon("trash", width: 21, height: 21, class: "text-danger py-1"), fora.forum_thread_forum_post_path(@forum_thread, forum_post),
           class: "text-muted",
           method: :delete, 
-          data: { toggle: "tooltip", placement: "left", confirm: "Are you sure you want to delete this post?" },
+          data: { toggle: "tooltip", 
+                  turbo: true, 
+                  turbo_method: :delete,
+                  turbo_confirm: 'Are you sure?' },
           title: t('delete_this_post')
         %>
       </div>
