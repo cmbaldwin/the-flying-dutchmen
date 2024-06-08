@@ -1,10 +1,9 @@
 module Fora::ForumPostsHelper
   # Override this to use avatars from other places than Gravatar
-  def avatar_tag(email)
-    user = User.find_by(email:)
+  def avatar_tag(user)
     return unless user.avatar.attached?
 
-    image_tag user.avatar.variant(resize: '48x48!'), class: 'rounded img-fluid'
+    image_tag url_for(user.avatar.representation(resize_to_limit: [50, 50])), class: 'rounded img-fluid'
   end
 
   def category_link(category)
