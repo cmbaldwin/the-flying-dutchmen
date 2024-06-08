@@ -13,12 +13,14 @@ module Fora::ForumPostsHelper
 
   # Override this method to provide your own content formatting like Markdown
   def formatted_content(text)
-    if current_user.new_window
+    if current_user.new_window && text.body
       formatted_text = Nokogiri::HTML(text.body.to_rendered_html_with_layout)
       formatted_text.css('a').each do |link|
         link['target'] = '_blank'
       end
       formatted_text.to_html.html_safe
+    elsif text.body.nil?
+      '[empty content]'
     else
       text
     end
