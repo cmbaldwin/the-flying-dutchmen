@@ -13,21 +13,23 @@ class Fora::ForumPostNotificationJob < ApplicationJob
   end
 
   def send_webhook(forum_post)
-    slack_webhook_url = Rails.application.secrets.fora_slack_url
+    slack_webhook_url = Rails.application.credentials.fora_slack_url
     return if slack_webhook_url.blank?
 
     forum_thread = forum_post.forum_thread
     payload = {
-      fallback: "#{forum_post.user.name} replied to <#{forum_thread_url(forum_thread, anchor: ActionView::RecordIdentifier.dom_id(forum_post))}|#{forum_thread.title}>",
-      pretext: "#{forum_post.user.name} replied to <#{forum_thread_url(forum_thread, anchor: ActionView::RecordIdentifier.dom_id(forum_post))}|#{forum_thread.title}>",
+      fallback: "#{forum_post.user.name} replied to <#{forum_thread_url(forum_thread,
+                                                                        anchor: ActionView::RecordIdentifier.dom_id(forum_post))}|#{forum_thread.title}>",
+      pretext: "#{forum_post.user.name} replied to <#{forum_thread_url(forum_thread,
+                                                                       anchor: ActionView::RecordIdentifier.dom_id(forum_post))}|#{forum_thread.title}>",
       fields: [
         {
-          title: "Thread",
+          title: 'Thread',
           value: forum_thread.title,
           short: true
         },
         {
-          title: "Posted By",
+          title: 'Posted By',
           value: forum_post.user.name,
           short: true
         }

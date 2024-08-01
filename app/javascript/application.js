@@ -7,13 +7,17 @@ import "controllers"
 // ActiveStorage
 import "@rails/activestorage"
 
+// Trix
+import "trix"
+
+document.addEventListener("trix-before-initialize", () => {
+  // Before Trix init...
+})
+
 // Boostrap 5+
 import "@popperjs/core"
 import "bootstrap"
 import * as bootstrap from "bootstrap"
-
-// Trix
-import "trix"
 
 // Fora
 import 'fora';

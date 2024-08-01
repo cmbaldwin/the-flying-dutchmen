@@ -6,9 +6,12 @@ class ForumThread < ApplicationRecord
   belongs_to :user
   has_many :forum_posts, dependent: :destroy
   has_many :forum_subscriptions, dependent: :destroy
-  has_many :optin_subscribers, -> { where(forum_subscriptions: {subscription_type: :optin}) }, through: :forum_subscriptions, source: :user, dependent: :destroy
-  has_many :optout_subscribers, -> { where(forum_subscriptions: {subscription_type: :optout}) }, through: :forum_subscriptions, source: :user, dependent: :destroy
-
+  has_many :optin_subscribers, lambda {
+                                 where(forum_subscriptions: { subscription_type: :optin })
+                               }, through: :forum_subscriptions, source: :user, dependent: :destroy
+  has_many :optout_subscribers, lambda {
+                                  where(forum_subscriptions: { subscription_type: :optout })
+                                }, through: :forum_subscriptions, source: :user, dependent: :destroy
 
   accepts_nested_attributes_for :forum_posts
 
@@ -28,6 +31,7 @@ class ForumThread < ApplicationRecord
 
   def subscription_for(user)
     return nil if user.nil?
+
     forum_subscriptions.find_by(user_id: user.id)
   end
 
@@ -37,39 +41,41 @@ class ForumThread < ApplicationRecord
     subscription = subscription_for(user)
 
     if subscription.present?
-      subscription.subscription_type == "optin"
+      subscription.subscription_type == 'optin'
     else
       forum_posts.where(user_id: user.id).any?
     end
   end
 
   def toggle_subscription(user)
+    return unless user.auto_subscribe
+
     subscription = subscription_for(user)
 
     if subscription.present?
       subscription.toggle!
     elsif forum_posts.where(user_id: user.id).any?
-      forum_subscriptions.create(user: user, subscription_type: "optout")
+      forum_subscriptions.create(user:, subscription_type: 'optout')
     else
-      forum_subscriptions.create(user: user, subscription_type: "optin")
+      forum_subscriptions.create(user:, subscription_type: 'optin')
     end
   end
 
   def subscribed_reason(user)
-    return I18n.t(".not_receiving_notifications") if user.nil?
+    return I18n.t('.not_receiving_notifications') if user.nil?
 
     subscription = subscription_for(user)
 
     if subscription.present?
-      if subscription.subscription_type == "optout"
-        I18n.t(".ignoring_thread")
-      elsif subscription.subscription_type == "optin"
-        I18n.t(".receiving_notifications_because_subscribed")
+      if subscription.subscription_type == 'optout'
+        I18n.t('.ignoring_thread')
+      elsif subscription.subscription_type == 'optin'
+        I18n.t('.receiving_notifications_because_subscribed')
       end
     elsif forum_posts.where(user_id: user.id).any?
-      I18n.t(".receiving_notifications_because_posted")
+      I18n.t('.receiving_notifications_because_posted')
     else
-      I18n.t(".not_receiving_notifications")
+      I18n.t('.not_receiving_notifications')
     end
   end
 

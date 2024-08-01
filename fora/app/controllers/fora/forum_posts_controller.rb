@@ -1,9 +1,9 @@
 class Fora::ForumPostsController < Fora::ApplicationController
   before_action :authenticate_user!
   before_action :set_forum_thread
-  before_action :set_forum_post, only: [:edit, :update, :destroy]
-  before_action :require_mod_or_author_for_post!, only: [:edit, :update, :destroy]
-  before_action :require_mod_or_author_for_thread!, only: [:solved, :unsolved]
+  before_action :set_forum_post, only: %i[edit update destroy]
+  before_action :require_mod_or_author_for_post!, only: %i[edit update destroy]
+  before_action :require_mod_or_author_for_thread!, only: %i[solved unsolved]
 
   def create
     @forum_post = @forum_thread.forum_posts.new(forum_post_params)
@@ -11,21 +11,20 @@ class Fora::ForumPostsController < Fora::ApplicationController
 
     if @forum_post.save
       @forum_thread.toggle_subscription(current_user)
-      # Just run the toggler again, to create a subscription if the user has set the setting to auto-subcribe.
-      @forum_thread.toggle_subscription(current_user) if current_user.auto_subscribe
       Fora::ForumPostNotificationJob.perform_later(@forum_post)
-      redirect_to fora.forum_thread_path(@forum_thread, page: get_page_number(@forum_thread, @forum_post), anchor: "forum_post_#{@forum_post.id}")
+      redirect_to fora.forum_thread_path(@forum_thread, page: get_page_number(@forum_thread, @forum_post),
+                                                        anchor: "forum_post_#{@forum_post.id}")
     else
-      render template: "fora/forum_threads/show"
+      render template: 'fora/forum_threads/show'
     end
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
     if @forum_post.update(forum_post_params)
-      redirect_to fora.forum_thread_path(@forum_thread, page: get_page_number(@forum_thread, @forum_post), anchor: ActionView::RecordIdentifier.dom_id(@forum_post))
+      redirect_to fora.forum_thread_path(@forum_thread, page: get_page_number(@forum_thread, @forum_post),
+                                                        anchor: ActionView::RecordIdentifier.dom_id(@forum_post))
     else
       render action: :edit
     end
@@ -43,7 +42,8 @@ class Fora::ForumPostsController < Fora::ApplicationController
     @forum_post.update_column(:solved, true)
     @forum_thread.update_column(:solved, true)
 
-    redirect_to fora.forum_thread_path(@forum_thread, page: get_page_number(@forum_thread, @forum_post), anchor: ActionView::RecordIdentifier.dom_id(@forum_post))
+    redirect_to fora.forum_thread_path(@forum_thread, page: get_page_number(@forum_thread, @forum_post),
+                                                      anchor: ActionView::RecordIdentifier.dom_id(@forum_post))
   end
 
   def unsolved
@@ -52,7 +52,8 @@ class Fora::ForumPostsController < Fora::ApplicationController
     @forum_thread.forum_posts.update_all(solved: false)
     @forum_thread.update_column(:solved, false)
 
-    redirect_to fora.forum_thread_path(@forum_thread, page: get_page_number(@forum_thread, @forum_post), anchor: ActionView::RecordIdentifier.dom_id(@forum_post))
+    redirect_to fora.forum_thread_path(@forum_thread, page: get_page_number(@forum_thread, @forum_post),
+                                                      anchor: ActionView::RecordIdentifier.dom_id(@forum_post))
   end
 
   private
@@ -63,10 +64,10 @@ class Fora::ForumPostsController < Fora::ApplicationController
 
   def set_forum_post
     @forum_post = if is_moderator?
-      @forum_thread.forum_posts.find(params[:id])
-    else
-      current_user.forum_posts.find(params[:id])
-    end
+                    @forum_thread.forum_posts.find(params[:id])
+                  else
+                    current_user.forum_posts.find(params[:id])
+                  end
   end
 
   def forum_post_params

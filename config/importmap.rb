@@ -23,4 +23,4 @@ pin '@rails/actiontext', to: 'actiontext.esm.js'
 pin 'trix'
 
 # Fora
-pin 'fora', preload: true
+pin 'fora'

@@ -1,17 +1,18 @@
-class Fora::ApplicationController < ::ApplicationController
+class Fora::ApplicationController < ApplicationController
   before_action :check_user
 
   def check_user
-    return if user_signed_in? #can also use current_user.method? to check various things
+    return if user_signed_in? # can also use current_user.method? to check various things
+
     flash[:notice] = 'Unauthorized. Only registered and confirmed users can view the forum at this time.'
-    redirect_to root_path, error: 'Unauthorized'
+    redirect_to new_user_session_path, error: 'Unauthorized'
   end
 
-  layout "fora"
+  layout 'fora'
 
   def page_number
-    page = params.fetch(:page, "").gsub(/[^0-9]/, "").to_i
-    page = "1" if page.zero?
+    page = params.fetch(:page, '').gsub(/[^0-9]/, '').to_i
+    page = '1' if page.zero?
     page
   end
 
@@ -36,15 +37,15 @@ class Fora::ApplicationController < ::ApplicationController
   helper_method :is_moderator?
 
   def require_mod_or_author_for_post!
-    unless is_moderator_or_owner?(@forum_post)
-      redirect_to_root
-    end
+    return if is_moderator_or_owner?(@forum_post)
+
+    redirect_to_root
   end
 
   def require_mod_or_author_for_thread!
-    unless is_moderator_or_owner?(@forum_thread)
-      redirect_to_root
-    end
+    return if is_moderator_or_owner?(@forum_thread)
+
+    redirect_to_root
   end
 
   private

@@ -19,8 +19,6 @@ module Fora::ForumPostsHelper
         link['target'] = '_blank'
       end
       formatted_text.to_html.html_safe
-    elsif text.body.nil?
-      '[empty content]'
     else
       text
     end

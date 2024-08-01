@@ -1,7 +1,7 @@
 class Fora::ForumThreadsController < Fora::ApplicationController
-  before_action :authenticate_user!, only: [:mine, :participating, :new, :create]
-  before_action :set_forum_thread, only: [:show, :edit, :update]
-  before_action :require_mod_or_author_for_thread!, only: [:edit, :update]
+  before_action :authenticate_user!, only: %i[mine participating new create]
+  before_action :set_forum_thread, only: %i[show edit update]
+  before_action :require_mod_or_author_for_thread!, only: %i[edit update]
 
   def index
     @forum_threads = ForumThread.pinned_first.sorted.includes(:user, :forum_category).paginate(page: page_number)
@@ -18,12 +18,16 @@ class Fora::ForumThreadsController < Fora::ApplicationController
   end
 
   def mine
-    @forum_threads = ForumThread.where(user: current_user).sorted.includes(:user, :forum_category).paginate(page: page_number)
+    @forum_threads = ForumThread.where(user: current_user)
+                                .sorted.includes(:user, :forum_category)
+                                .paginate(page: page_number)
     render action: :index
   end
 
   def participating
-    @forum_threads = ForumThread.includes(:user, :forum_category).joins(:forum_posts).where(forum_posts: {user_id: current_user.id}).distinct(forum_posts: :id).sorted.paginate(page: page_number)
+    @forum_threads = ForumThread.includes(:user, :forum_category)
+                                .joins(:forum_posts).where(forum_posts: { user_id: current_user.id })
+                                .distinct(forum_posts: :id).sorted.paginate(page: page_number)
     render action: :index
   end
 
@@ -49,12 +53,11 @@ class Fora::ForumThreadsController < Fora::ApplicationController
     end
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
     if @forum_thread.update(forum_thread_params)
-      redirect_to fora.forum_thread_path(@forum_thread), notice: I18n.t("your_changes_were_saved")
+      redirect_to fora.forum_thread_path(@forum_thread), notice: I18n.t('your_changes_were_saved')
     else
       render action: :edit
     end

@@ -13,7 +13,7 @@ class Fora::ForumThreadNotificationJob < ApplicationJob
   end
 
   def send_webhook(forum_thread)
-    slack_webhook_url = Rails.application.secrets.fora_slack_url
+    slack_webhook_url = Rails.application.credentials.fora_slack_url
     return if slack_webhook_url.blank?
 
     forum_post = forum_thread.forum_posts.first
