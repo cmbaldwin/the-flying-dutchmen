@@ -29,25 +29,22 @@
                 <li><a class="nav-link disabled">The Funnel</a></li>
               </ul>
 
-              <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-                <input type="search" class="form-control" placeholder="Search..." aria-label="Search" disabled>
-              </form>
+              <% if user_signed_in? %>
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                  <input type="search" class="form-control" placeholder="Search..." aria-label="Search" disabled>
+                </form> 
 
-              <div class="dropdown text-end">
-                <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                  <%= bootstrap_icon("person", width: 21, height: 21) %>
-                </a>
-                <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
-                  <% if user_signed_in? %>
+                <div class="dropdown text-end">
+                  <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <%= bootstrap_icon("person", width: 21, height: 21) %>
+                  </a>
+                  <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
                     <li><%= link_to "Profile", edit_user_registration_path, :class => 'dropdown-item' %></li>
                     <li><hr class="dropdown-divider"></li>
                     <li><%= link_to "Sign out", destroy_user_session_path, data: { turbo_method: :delete }, :class => 'dropdown-item' %></li>
-                  <% else %>  
-                    <li><%= link_to "Login", new_user_session_path, :method => :post, :class => 'dropdown-item'  %></li>
-                    <li><%= link_to "Sign up", new_user_registration_path, :class => 'dropdown-item'  %></li>
-                  <% end %>
-                </ul>
-              </div>
+                  </ul>
+                </div>
+              <% end %>
             </div>
           </div>
         </header>
