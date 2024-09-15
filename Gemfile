@@ -1,13 +1,15 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.3.1'
+ruby '3.3.5'
 
 # Set up local .env file, require immediately
 gem 'dotenv-rails', groups: %i[development test], require: 'dotenv/load'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 7'
+# Soon to be non-standard libraries
+gem 'ostruct'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use Puma as the app server

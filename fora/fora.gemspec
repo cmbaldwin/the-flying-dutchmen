@@ -20,8 +20,8 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "friendly_id", ">= 5.2.0"
-  spec.add_dependency "rails", '>= 6.1.4.1'
-  spec.add_dependency "will_paginate", ">= 3.1.0"
+  spec.add_dependency "friendly_id"
+  spec.add_dependency "rails"
+  spec.add_dependency "will_paginate"
   spec.add_dependency "bootstrap-icons-helper"
 end
