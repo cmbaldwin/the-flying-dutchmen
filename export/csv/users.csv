@@ -1,0 +1,5 @@
+id,email,username,moderator,settings_json,avatar_path,created_at,updated_at
+1,codybaldwin@gmail.com,Cody,true,"{""auto_subscribe"":""0"",""new_window"":""0""}",images/users/1/avatar.jpg,2021-10-15 07:29:01 +0900,2024-06-09 08:51:47 +0900
+2,joshnishikawa@gmail.com,Josh,true,{},images/users/2/avatar.jpg,2021-10-15 08:16:34 +0900,2021-11-10 12:11:20 +0900
+3,f.montoya@gmail.com,Fidel,true,{},images/users/3/avatar.jpg,2021-10-27 21:05:41 +0900,2024-06-02 11:14:13 +0900
+4,telferrichard19@gmail.com,telf,true,{},,2021-10-31 16:38:16 +0900,2024-09-14 08:37:04 +0900

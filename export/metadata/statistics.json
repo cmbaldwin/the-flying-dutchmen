@@ -1,0 +1,16 @@
+{
+  "export_date": "2025-12-21T02:21:10Z",
+  "duration_seconds": 3.51,
+  "counts": {
+    "users": 4,
+    "categories": 7,
+    "threads": 23,
+    "posts": 366
+  },
+  "images": {
+    "downloaded": 3,
+    "failed": 0
+  },
+  "attachment_mapping": {
+  }
+}

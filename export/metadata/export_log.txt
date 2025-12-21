@@ -1,0 +1,88 @@
+[2025-12-21 11:21:06] INFO: ============================================================
+[2025-12-21 11:21:06] INFO: Starting forum export
+[2025-12-21 11:21:06] INFO: ============================================================
+[2025-12-21 11:21:06] INFO: Creating export directory structure at: /Users/cody/Dev/the-flying-dutchmen/export
+[2025-12-21 11:21:06] INFO: Directory structure created
+[2025-12-21 11:21:06] INFO: Exporting users...
+[2025-12-21 11:21:07] INFO: Downloaded User 1 avatar: avatar.jpg
+[2025-12-21 11:21:09] INFO: Downloaded User 2 avatar: avatar.jpg
+[2025-12-21 11:21:09] INFO: Downloaded User 3 avatar: avatar.jpg
+[2025-12-21 11:21:09] INFO: Exported 4 users
+[2025-12-21 11:21:09] INFO: Exporting forum categories...
+[2025-12-21 11:21:09] INFO: Exported 7 categories
+[2025-12-21 11:21:09] INFO: Exporting forum threads...
+[2025-12-21 11:21:09] INFO: Exported 23 threads
+[2025-12-21 11:21:09] INFO: Exporting forum posts (this may take a while)...
+[2025-12-21 11:21:09] INFO: Processing 1 attachments in post 15
+[2025-12-21 11:21:09] ERROR: Post 15: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-21 11:21:09] INFO: Processing 4 attachments in post 16
+[2025-12-21 11:21:09] ERROR: Post 16: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-21 11:21:09] ERROR: Post 16: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-21 11:21:09] ERROR: Post 16: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-21 11:21:09] ERROR: Post 16: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-21 11:21:09] INFO: Processing 1 attachments in post 21
+[2025-12-21 11:21:09] ERROR: Post 21: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-21 11:21:09] INFO: Processing 1 attachments in post 27
+[2025-12-21 11:21:09] ERROR: Post 27: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-21 11:21:09] INFO: Processing 1 attachments in post 41
+[2025-12-21 11:21:09] ERROR: Post 41: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-21 11:21:09] INFO: Processing 1 attachments in post 42
+[2025-12-21 11:21:09] ERROR: Post 42: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-21 11:21:09] INFO: Processing 1 attachments in post 50
+[2025-12-21 11:21:09] ERROR: Post 50: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-21 11:21:09] INFO: Processing 1 attachments in post 53
+[2025-12-21 11:21:09] ERROR: Post 53: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-21 11:21:09] INFO: Processed 50 posts...
+[2025-12-21 11:21:09] INFO: Processing 2 attachments in post 67
+[2025-12-21 11:21:09] ERROR: Post 67: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-21 11:21:09] ERROR: Post 67: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-21 11:21:09] INFO: Processing 1 attachments in post 88
+[2025-12-21 11:21:09] ERROR: Post 88: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-21 11:21:09] INFO: Processing 1 attachments in post 137
+[2025-12-21 11:21:09] ERROR: Post 137: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-21 11:21:09] INFO: Processing 1 attachments in post 139
+[2025-12-21 11:21:09] ERROR: Post 139: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-21 11:21:09] INFO: Processed 100 posts...
+[2025-12-21 11:21:09] INFO: Processing 1 attachments in post 160
+[2025-12-21 11:21:09] ERROR: Post 160: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-21 11:21:09] INFO: Processing 1 attachments in post 167
+[2025-12-21 11:21:09] ERROR: Post 167: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-21 11:21:09] INFO: Processed 150 posts...
+[2025-12-21 11:21:09] INFO: Processing 1 attachments in post 194
+[2025-12-21 11:21:09] WARN: Post 194: Attachment 1 missing SGID, skipping
+[2025-12-21 11:21:09] INFO: Processing 1 attachments in post 229
+[2025-12-21 11:21:09] ERROR: Post 229: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-21 11:21:09] INFO: Processing 1 attachments in post 231
+[2025-12-21 11:21:09] WARN: Post 231: Attachment 1 missing SGID, skipping
+[2025-12-21 11:21:09] INFO: Processed 200 posts...
+[2025-12-21 11:21:09] INFO: Processing 2 attachments in post 252
+[2025-12-21 11:21:09] ERROR: Post 252: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-21 11:21:09] ERROR: Post 252: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-21 11:21:09] INFO: Processing 1 attachments in post 258
+[2025-12-21 11:21:09] ERROR: Post 258: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-21 11:21:09] INFO: Processing 2 attachments in post 282
+[2025-12-21 11:21:09] ERROR: Post 282: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-21 11:21:09] ERROR: Post 282: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-21 11:21:09] INFO: Processing 1 attachments in post 284
+[2025-12-21 11:21:09] WARN: Post 284: Attachment 1 missing SGID, skipping
+[2025-12-21 11:21:09] INFO: Processing 2 attachments in post 291
+[2025-12-21 11:21:09] WARN: Post 291: Attachment 1 missing SGID, skipping
+[2025-12-21 11:21:09] WARN: Post 291: Attachment 2 missing SGID, skipping
+[2025-12-21 11:21:09] INFO: Processed 250 posts...
+[2025-12-21 11:21:09] INFO: Processing 2 attachments in post 297
+[2025-12-21 11:21:09] WARN: Post 297: Attachment 1 missing SGID, skipping
+[2025-12-21 11:21:09] ERROR: Post 297: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-21 11:21:09] INFO: Processing 1 attachments in post 299
+[2025-12-21 11:21:09] ERROR: Post 299: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-21 11:21:09] INFO: Processed 300 posts...
+[2025-12-21 11:21:09] INFO: Processed 350 posts...
+[2025-12-21 11:21:10] INFO: Exported 366 posts
+[2025-12-21 11:21:10] INFO: Generating README...
+[2025-12-21 11:21:10] INFO: README generated
+[2025-12-21 11:21:10] INFO: Generating statistics...
+[2025-12-21 11:21:10] INFO: Statistics generated
+[2025-12-21 11:21:10] INFO: ============================================================
+[2025-12-21 11:21:10] INFO: Export complete!
+[2025-12-21 11:21:10] INFO: Duration: 4s
+[2025-12-21 11:21:10] INFO: Location: /Users/cody/Dev/the-flying-dutchmen/export
+[2025-12-21 11:21:10] INFO: ============================================================
