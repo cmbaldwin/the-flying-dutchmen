@@ -8,9 +8,10 @@ class ForumExporter
       @logger = logger
       @downloaded_count = 0
       @failed_count = 0
+      @downloaded_blob_keys = Set.new
     end
 
-    attr_reader :downloaded_count, :failed_count
+    attr_reader :downloaded_count, :failed_count, :downloaded_blob_keys
 
     def download_avatar(user)
       return nil unless user.avatar.attached?
@@ -54,10 +55,10 @@ class ForumExporter
         end
 
         @downloaded_count += 1
+        @downloaded_blob_keys << blob.key
         @logger.info("Downloaded #{description}: #{File.basename(destination)}")
         true
-
-      rescue => e
+      rescue StandardError => e
         retries += 1
 
         if retries <= MAX_RETRIES

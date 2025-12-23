@@ -1,88 +1,188 @@
-[2025-12-21 11:21:06] INFO: ============================================================
-[2025-12-21 11:21:06] INFO: Starting forum export
-[2025-12-21 11:21:06] INFO: ============================================================
-[2025-12-21 11:21:06] INFO: Creating export directory structure at: /Users/cody/Dev/the-flying-dutchmen/export
-[2025-12-21 11:21:06] INFO: Directory structure created
-[2025-12-21 11:21:06] INFO: Exporting users...
-[2025-12-21 11:21:07] INFO: Downloaded User 1 avatar: avatar.jpg
-[2025-12-21 11:21:09] INFO: Downloaded User 2 avatar: avatar.jpg
-[2025-12-21 11:21:09] INFO: Downloaded User 3 avatar: avatar.jpg
-[2025-12-21 11:21:09] INFO: Exported 4 users
-[2025-12-21 11:21:09] INFO: Exporting forum categories...
-[2025-12-21 11:21:09] INFO: Exported 7 categories
-[2025-12-21 11:21:09] INFO: Exporting forum threads...
-[2025-12-21 11:21:09] INFO: Exported 23 threads
-[2025-12-21 11:21:09] INFO: Exporting forum posts (this may take a while)...
-[2025-12-21 11:21:09] INFO: Processing 1 attachments in post 15
-[2025-12-21 11:21:09] ERROR: Post 15: SGID resolved to NilClass, expected ActiveStorage::Blob
-[2025-12-21 11:21:09] INFO: Processing 4 attachments in post 16
-[2025-12-21 11:21:09] ERROR: Post 16: SGID resolved to NilClass, expected ActiveStorage::Blob
-[2025-12-21 11:21:09] ERROR: Post 16: SGID resolved to NilClass, expected ActiveStorage::Blob
-[2025-12-21 11:21:09] ERROR: Post 16: SGID resolved to NilClass, expected ActiveStorage::Blob
-[2025-12-21 11:21:09] ERROR: Post 16: SGID resolved to NilClass, expected ActiveStorage::Blob
-[2025-12-21 11:21:09] INFO: Processing 1 attachments in post 21
-[2025-12-21 11:21:09] ERROR: Post 21: SGID resolved to NilClass, expected ActiveStorage::Blob
-[2025-12-21 11:21:09] INFO: Processing 1 attachments in post 27
-[2025-12-21 11:21:09] ERROR: Post 27: SGID resolved to NilClass, expected ActiveStorage::Blob
-[2025-12-21 11:21:09] INFO: Processing 1 attachments in post 41
-[2025-12-21 11:21:09] ERROR: Post 41: SGID resolved to NilClass, expected ActiveStorage::Blob
-[2025-12-21 11:21:09] INFO: Processing 1 attachments in post 42
-[2025-12-21 11:21:09] ERROR: Post 42: SGID resolved to NilClass, expected ActiveStorage::Blob
-[2025-12-21 11:21:09] INFO: Processing 1 attachments in post 50
-[2025-12-21 11:21:09] ERROR: Post 50: SGID resolved to NilClass, expected ActiveStorage::Blob
-[2025-12-21 11:21:09] INFO: Processing 1 attachments in post 53
-[2025-12-21 11:21:09] ERROR: Post 53: SGID resolved to NilClass, expected ActiveStorage::Blob
-[2025-12-21 11:21:09] INFO: Processed 50 posts...
-[2025-12-21 11:21:09] INFO: Processing 2 attachments in post 67
-[2025-12-21 11:21:09] ERROR: Post 67: SGID resolved to NilClass, expected ActiveStorage::Blob
-[2025-12-21 11:21:09] ERROR: Post 67: SGID resolved to NilClass, expected ActiveStorage::Blob
-[2025-12-21 11:21:09] INFO: Processing 1 attachments in post 88
-[2025-12-21 11:21:09] ERROR: Post 88: SGID resolved to NilClass, expected ActiveStorage::Blob
-[2025-12-21 11:21:09] INFO: Processing 1 attachments in post 137
-[2025-12-21 11:21:09] ERROR: Post 137: SGID resolved to NilClass, expected ActiveStorage::Blob
-[2025-12-21 11:21:09] INFO: Processing 1 attachments in post 139
-[2025-12-21 11:21:09] ERROR: Post 139: SGID resolved to NilClass, expected ActiveStorage::Blob
-[2025-12-21 11:21:09] INFO: Processed 100 posts...
-[2025-12-21 11:21:09] INFO: Processing 1 attachments in post 160
-[2025-12-21 11:21:09] ERROR: Post 160: SGID resolved to NilClass, expected ActiveStorage::Blob
-[2025-12-21 11:21:09] INFO: Processing 1 attachments in post 167
-[2025-12-21 11:21:09] ERROR: Post 167: SGID resolved to NilClass, expected ActiveStorage::Blob
-[2025-12-21 11:21:09] INFO: Processed 150 posts...
-[2025-12-21 11:21:09] INFO: Processing 1 attachments in post 194
-[2025-12-21 11:21:09] WARN: Post 194: Attachment 1 missing SGID, skipping
-[2025-12-21 11:21:09] INFO: Processing 1 attachments in post 229
-[2025-12-21 11:21:09] ERROR: Post 229: SGID resolved to NilClass, expected ActiveStorage::Blob
-[2025-12-21 11:21:09] INFO: Processing 1 attachments in post 231
-[2025-12-21 11:21:09] WARN: Post 231: Attachment 1 missing SGID, skipping
-[2025-12-21 11:21:09] INFO: Processed 200 posts...
-[2025-12-21 11:21:09] INFO: Processing 2 attachments in post 252
-[2025-12-21 11:21:09] ERROR: Post 252: SGID resolved to NilClass, expected ActiveStorage::Blob
-[2025-12-21 11:21:09] ERROR: Post 252: SGID resolved to NilClass, expected ActiveStorage::Blob
-[2025-12-21 11:21:09] INFO: Processing 1 attachments in post 258
-[2025-12-21 11:21:09] ERROR: Post 258: SGID resolved to NilClass, expected ActiveStorage::Blob
-[2025-12-21 11:21:09] INFO: Processing 2 attachments in post 282
-[2025-12-21 11:21:09] ERROR: Post 282: SGID resolved to NilClass, expected ActiveStorage::Blob
-[2025-12-21 11:21:09] ERROR: Post 282: SGID resolved to NilClass, expected ActiveStorage::Blob
-[2025-12-21 11:21:09] INFO: Processing 1 attachments in post 284
-[2025-12-21 11:21:09] WARN: Post 284: Attachment 1 missing SGID, skipping
-[2025-12-21 11:21:09] INFO: Processing 2 attachments in post 291
-[2025-12-21 11:21:09] WARN: Post 291: Attachment 1 missing SGID, skipping
-[2025-12-21 11:21:09] WARN: Post 291: Attachment 2 missing SGID, skipping
-[2025-12-21 11:21:09] INFO: Processed 250 posts...
-[2025-12-21 11:21:09] INFO: Processing 2 attachments in post 297
-[2025-12-21 11:21:09] WARN: Post 297: Attachment 1 missing SGID, skipping
-[2025-12-21 11:21:09] ERROR: Post 297: SGID resolved to NilClass, expected ActiveStorage::Blob
-[2025-12-21 11:21:09] INFO: Processing 1 attachments in post 299
-[2025-12-21 11:21:09] ERROR: Post 299: SGID resolved to NilClass, expected ActiveStorage::Blob
-[2025-12-21 11:21:09] INFO: Processed 300 posts...
-[2025-12-21 11:21:09] INFO: Processed 350 posts...
-[2025-12-21 11:21:10] INFO: Exported 366 posts
-[2025-12-21 11:21:10] INFO: Generating README...
-[2025-12-21 11:21:10] INFO: README generated
-[2025-12-21 11:21:10] INFO: Generating statistics...
-[2025-12-21 11:21:10] INFO: Statistics generated
-[2025-12-21 11:21:10] INFO: ============================================================
-[2025-12-21 11:21:10] INFO: Export complete!
-[2025-12-21 11:21:10] INFO: Duration: 4s
-[2025-12-21 11:21:10] INFO: Location: /Users/cody/Dev/the-flying-dutchmen/export
-[2025-12-21 11:21:10] INFO: ============================================================
+[2025-12-22 16:24:28] INFO: ============================================================
+[2025-12-22 16:24:28] INFO: Starting forum export
+[2025-12-22 16:24:28] INFO: ============================================================
+[2025-12-22 16:24:28] INFO: Creating export directory structure at: /Users/cody/Dev/the-flying-dutchmen/export
+[2025-12-22 16:24:28] INFO: Directory structure created
+[2025-12-22 16:24:28] INFO: Exporting users...
+[2025-12-22 16:24:29] INFO: Downloaded User 1 avatar: avatar.jpg
+[2025-12-22 16:24:30] INFO: Downloaded User 2 avatar: avatar.jpg
+[2025-12-22 16:24:30] INFO: Downloaded User 3 avatar: avatar.jpg
+[2025-12-22 16:24:30] INFO: Exported 4 users
+[2025-12-22 16:24:30] INFO: Exporting forum categories...
+[2025-12-22 16:24:30] INFO: Exported 7 categories
+[2025-12-22 16:24:30] INFO: Exporting forum threads...
+[2025-12-22 16:24:30] INFO: Exported 23 threads
+[2025-12-22 16:24:30] INFO: Exporting forum posts (this may take a while)...
+[2025-12-22 16:24:30] INFO: Processing 1 attachments in post 15
+[2025-12-22 16:24:30] ERROR: Post 15: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-22 16:24:30] INFO: Processing 4 attachments in post 16
+[2025-12-22 16:24:30] ERROR: Post 16: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-22 16:24:30] ERROR: Post 16: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-22 16:24:30] ERROR: Post 16: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-22 16:24:30] ERROR: Post 16: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-22 16:24:30] INFO: Processing 1 attachments in post 21
+[2025-12-22 16:24:30] ERROR: Post 21: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-22 16:24:30] INFO: Processing 1 attachments in post 27
+[2025-12-22 16:24:30] ERROR: Post 27: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-22 16:24:30] INFO: Processing 1 attachments in post 41
+[2025-12-22 16:24:30] ERROR: Post 41: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-22 16:24:30] INFO: Processing 1 attachments in post 42
+[2025-12-22 16:24:30] ERROR: Post 42: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-22 16:24:30] INFO: Processing 1 attachments in post 50
+[2025-12-22 16:24:30] ERROR: Post 50: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-22 16:24:30] INFO: Processing 1 attachments in post 53
+[2025-12-22 16:24:30] ERROR: Post 53: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-22 16:24:30] INFO: Processed 50 posts...
+[2025-12-22 16:24:30] INFO: Processing 2 attachments in post 67
+[2025-12-22 16:24:30] ERROR: Post 67: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-22 16:24:30] ERROR: Post 67: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-22 16:24:30] INFO: Processing 1 attachments in post 88
+[2025-12-22 16:24:30] ERROR: Post 88: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-22 16:24:30] INFO: Processing 1 attachments in post 137
+[2025-12-22 16:24:30] ERROR: Post 137: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-22 16:24:30] INFO: Processing 1 attachments in post 139
+[2025-12-22 16:24:30] ERROR: Post 139: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-22 16:24:30] INFO: Processed 100 posts...
+[2025-12-22 16:24:31] INFO: Processing 1 attachments in post 160
+[2025-12-22 16:24:31] ERROR: Post 160: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-22 16:24:31] INFO: Processing 1 attachments in post 167
+[2025-12-22 16:24:31] ERROR: Post 167: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-22 16:24:31] INFO: Processed 150 posts...
+[2025-12-22 16:24:31] INFO: Processing 1 attachments in post 194
+[2025-12-22 16:24:31] WARN: Post 194: Attachment 1 missing SGID, skipping
+[2025-12-22 16:24:31] INFO: Processing 1 attachments in post 229
+[2025-12-22 16:24:31] ERROR: Post 229: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-22 16:24:31] INFO: Processing 1 attachments in post 231
+[2025-12-22 16:24:31] WARN: Post 231: Attachment 1 missing SGID, skipping
+[2025-12-22 16:24:31] INFO: Processed 200 posts...
+[2025-12-22 16:24:31] INFO: Processing 2 attachments in post 252
+[2025-12-22 16:24:31] ERROR: Post 252: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-22 16:24:31] ERROR: Post 252: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-22 16:24:31] INFO: Processing 1 attachments in post 258
+[2025-12-22 16:24:31] ERROR: Post 258: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-22 16:24:31] INFO: Processing 2 attachments in post 282
+[2025-12-22 16:24:31] ERROR: Post 282: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-22 16:24:31] ERROR: Post 282: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-22 16:24:31] INFO: Processing 1 attachments in post 284
+[2025-12-22 16:24:31] WARN: Post 284: Attachment 1 missing SGID, skipping
+[2025-12-22 16:24:31] INFO: Processing 2 attachments in post 291
+[2025-12-22 16:24:31] WARN: Post 291: Attachment 1 missing SGID, skipping
+[2025-12-22 16:24:31] WARN: Post 291: Attachment 2 missing SGID, skipping
+[2025-12-22 16:24:31] INFO: Processed 250 posts...
+[2025-12-22 16:24:31] INFO: Processing 2 attachments in post 297
+[2025-12-22 16:24:31] WARN: Post 297: Attachment 1 missing SGID, skipping
+[2025-12-22 16:24:31] ERROR: Post 297: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-22 16:24:31] INFO: Processing 1 attachments in post 299
+[2025-12-22 16:24:31] ERROR: Post 299: SGID resolved to NilClass, expected ActiveStorage::Blob
+[2025-12-22 16:24:31] INFO: Processed 300 posts...
+[2025-12-22 16:24:31] INFO: Processed 350 posts...
+[2025-12-22 16:24:31] INFO: Exported 366 posts
+[2025-12-22 16:24:31] INFO: Searching for images in ActiveStorage that were not downloaded...
+[2025-12-22 16:24:31] INFO: Found 79 blobs in ActiveStorage database
+[2025-12-22 16:24:31] INFO: Found 79 blobs that were not downloaded
+[2025-12-22 16:24:32] INFO: Downloaded unassigned image 1: xcmmhudh9n095tieuhjrbsz0o8j2.png
+[2025-12-22 16:24:32] INFO: Downloaded unassigned image 2: 2jw2qpvwh09aas1yzzm7l28w1hdb.png
+[2025-12-22 16:24:32] WARN: Failed to download blob gg19155u7jgxjhufhxtiy30v7vin (attempt 1/3): Missing configuration for the production Active Storage service. Configurations available for the test, local, and google services.
+[2025-12-22 16:24:33] WARN: Failed to download blob gg19155u7jgxjhufhxtiy30v7vin (attempt 2/3): Missing configuration for the production Active Storage service. Configurations available for the test, local, and google services.
+[2025-12-22 16:24:35] WARN: Failed to download blob gg19155u7jgxjhufhxtiy30v7vin (attempt 3/3): Missing configuration for the production Active Storage service. Configurations available for the test, local, and google services.
+[2025-12-22 16:24:38] ERROR: Failed to download blob gg19155u7jgxjhufhxtiy30v7vin after 3 attempts: Missing configuration for the production Active Storage service. Configurations available for the test, local, and google services.
+[2025-12-22 16:24:38] WARN: Failed to download blob 8e0yvk3sgaj5pmtmis3w46tyq8bs (attempt 1/3): Missing configuration for the production Active Storage service. Configurations available for the test, local, and google services.
+[2025-12-22 16:24:39] WARN: Failed to download blob 8e0yvk3sgaj5pmtmis3w46tyq8bs (attempt 2/3): Missing configuration for the production Active Storage service. Configurations available for the test, local, and google services.
+[2025-12-22 16:24:41] WARN: Failed to download blob 8e0yvk3sgaj5pmtmis3w46tyq8bs (attempt 3/3): Missing configuration for the production Active Storage service. Configurations available for the test, local, and google services.
+[2025-12-22 16:24:44] ERROR: Failed to download blob 8e0yvk3sgaj5pmtmis3w46tyq8bs after 3 attempts: Missing configuration for the production Active Storage service. Configurations available for the test, local, and google services.
+[2025-12-22 16:24:44] WARN: Failed to download blob u12f2f2c72jl6r50ih1o753p04je (attempt 1/3): Missing configuration for the production Active Storage service. Configurations available for the test, local, and google services.
+[2025-12-22 16:24:45] WARN: Failed to download blob u12f2f2c72jl6r50ih1o753p04je (attempt 2/3): Missing configuration for the production Active Storage service. Configurations available for the test, local, and google services.
+[2025-12-22 16:24:47] WARN: Failed to download blob u12f2f2c72jl6r50ih1o753p04je (attempt 3/3): Missing configuration for the production Active Storage service. Configurations available for the test, local, and google services.
+[2025-12-22 16:24:50] ERROR: Failed to download blob u12f2f2c72jl6r50ih1o753p04je after 3 attempts: Missing configuration for the production Active Storage service. Configurations available for the test, local, and google services.
+[2025-12-22 16:24:50] WARN: Failed to download blob kstr9q2pnx4axsg0t831dkm50ew8 (attempt 1/3): Missing configuration for the production Active Storage service. Configurations available for the test, local, and google services.
+[2025-12-22 16:24:52] WARN: Failed to download blob kstr9q2pnx4axsg0t831dkm50ew8 (attempt 2/3): Missing configuration for the production Active Storage service. Configurations available for the test, local, and google services.
+[2025-12-22 16:24:54] WARN: Failed to download blob kstr9q2pnx4axsg0t831dkm50ew8 (attempt 3/3): Missing configuration for the production Active Storage service. Configurations available for the test, local, and google services.
+[2025-12-22 16:24:57] ERROR: Failed to download blob kstr9q2pnx4axsg0t831dkm50ew8 after 3 attempts: Missing configuration for the production Active Storage service. Configurations available for the test, local, and google services.
+[2025-12-22 16:24:57] WARN: Failed to download blob 0sx7vll2vya38dm40q5wlskj3uar (attempt 1/3): Missing configuration for the production Active Storage service. Configurations available for the test, local, and google services.
+[2025-12-22 16:24:58] WARN: Failed to download blob 0sx7vll2vya38dm40q5wlskj3uar (attempt 2/3): Missing configuration for the production Active Storage service. Configurations available for the test, local, and google services.
+[2025-12-22 16:25:00] WARN: Failed to download blob 0sx7vll2vya38dm40q5wlskj3uar (attempt 3/3): Missing configuration for the production Active Storage service. Configurations available for the test, local, and google services.
+[2025-12-22 16:25:03] ERROR: Failed to download blob 0sx7vll2vya38dm40q5wlskj3uar after 3 attempts: Missing configuration for the production Active Storage service. Configurations available for the test, local, and google services.
+[2025-12-22 16:25:03] INFO: Downloaded unassigned image 8: lvxtstylq0rroelig1hlbdq72922.jpg
+[2025-12-22 16:25:04] INFO: Downloaded unassigned image 9: vzitm2ara5isv435laop4njdyh58.jpg
+[2025-12-22 16:25:05] INFO: Downloaded unassigned image 10: s4en680o3kh8x5rwj7qova0sg504.jpg
+[2025-12-22 16:25:06] INFO: Downloaded unassigned image 11: mfifxgx3o7ejju76396hnpx7m58f.png
+[2025-12-22 16:25:07] INFO: Downloaded unassigned image 12: 3bxcl20iozs9roe2ia8sljn9zsbh.jpg
+[2025-12-22 16:25:08] INFO: Downloaded unassigned image 13: 0o4sf5t4ndi63qatalpou7dhpbuk.jpg
+[2025-12-22 16:25:09] INFO: Downloaded unassigned image 14: cu7og810p05z9yoxnl75iufkarhq.png
+[2025-12-22 16:25:10] INFO: Downloaded unassigned image 15: tdnhryq0irwggatfa5h4csbwqwjp.png
+[2025-12-22 16:25:10] INFO: Downloaded unassigned image 16: pfintfqdxe5eq87ruwe55vv7xo7u.png
+[2025-12-22 16:25:12] INFO: Downloaded unassigned image 17: 9ct00cdbsesbp3xrp5g8gs2eaodv.jpg
+[2025-12-22 16:25:12] INFO: Downloaded unassigned image 18: rbdpkk5kgphwfb1uxx3f69m4ukc2.jpg
+[2025-12-22 16:25:13] INFO: Downloaded unassigned image 19: 3kbp4uqnftrkwc69zqdztxjuvr2g.png
+[2025-12-22 16:25:14] INFO: Downloaded unassigned image 20: 7ppu4g5bc0c1yq7humzxfx3ieddi.png
+[2025-12-22 16:25:15] INFO: Downloaded unassigned image 21: ducqo53k3wl51eqp1v9xnr90nmn1.png
+[2025-12-22 16:25:16] INFO: Downloaded unassigned image 22: 6vzpmq909heaei3bp8inmfwsbf6a.png
+[2025-12-22 16:25:17] INFO: Downloaded unassigned image 23: nmzw7isgpkmjw7n5zkplc4tdngr0.png
+[2025-12-22 16:25:18] INFO: Downloaded unassigned image 24: m93l99v1p8jxl4vqb7uvs3ho4giz.png
+[2025-12-22 16:25:19] INFO: Downloaded unassigned image 25: kx2zirtqciaf7x1uamgrz6hxuopt.png
+[2025-12-22 16:25:20] INFO: Downloaded unassigned image 26: 0mzhbyr4yrv5nh838j6gs0x6zy6c.png
+[2025-12-22 16:25:21] INFO: Downloaded unassigned image 27: bf9uaz62efjip48zxyksmtlwo9zb.png
+[2025-12-22 16:25:22] INFO: Downloaded unassigned image 28: qwlwp1fmqyx78pk1qf7z7frvaz70.png
+[2025-12-22 16:25:22] INFO: Downloaded unassigned image 29: hi448cj2qwoi5tw0jqofdgxnybyu.jpg
+[2025-12-22 16:25:24] INFO: Downloaded unassigned image 30: pd4ib5b8na99nqs2lunoaft5rlny.png
+[2025-12-22 16:25:24] INFO: Downloaded unassigned image 31: 5p50z93pnstyn80aw04pjdb3sur3.png
+[2025-12-22 16:25:25] INFO: Downloaded unassigned image 32: ltx8deumwo9taqne1ljupe3hhdx5.jpg
+[2025-12-22 16:25:25] INFO: Downloaded unassigned image 33: rxjcaayq39j2zta7vanysqgedjdg.png
+[2025-12-22 16:25:26] INFO: Downloaded unassigned image 34: 03rlzklvkzsmqnzvxr6cbx3m4fr1.png
+[2025-12-22 16:25:27] INFO: Downloaded unassigned image 35: r0n2p1kj44110sjcv6royqdh4hkd.png
+[2025-12-22 16:25:28] INFO: Downloaded unassigned image 36: qau8nd3132as35ljyx1xba7dg3jy.png
+[2025-12-22 16:25:29] INFO: Downloaded unassigned image 37: g32y7k703v5xxj3e5eil4qt18753.png
+[2025-12-22 16:25:30] INFO: Downloaded unassigned image 38: gc7q2bsrjidu1t8gy3wwwxgzd8sa.png
+[2025-12-22 16:25:31] INFO: Downloaded unassigned image 39: k3m4ri9vhogenq9v2bq8fc6arqg5.png
+[2025-12-22 16:25:32] INFO: Downloaded unassigned image 40: bhzit7ffd9qdu0or014e238voej8.png
+[2025-12-22 16:25:32] INFO: Downloaded unassigned image 41: pcvi61qit7hpcg29tg0xd1mnxszp.gif
+[2025-12-22 16:25:33] INFO: Downloaded unassigned image 42: 3t2lkxvvvgyz0qpberp0mu7ntuqw.png
+[2025-12-22 16:25:33] INFO: Downloaded unassigned image 43: qefmjsv4wqquv2e1h3bknttv2x3a.png
+[2025-12-22 16:25:34] INFO: Downloaded unassigned image 44: geeg9caq169t0w71k337nw0osce8.jpg
+[2025-12-22 16:25:35] INFO: Downloaded unassigned image 45: 16o2v2cczcxpf4j2ngfvh42n6roc.pdf
+[2025-12-22 16:25:36] INFO: Downloaded unassigned image 46: 53zztegms27dbgg81gg1ibc9bo1i.png
+[2025-12-22 16:25:36] INFO: Downloaded unassigned image 47: 9gwt2bon63zfq2nbkdfx4fkd5ua2.png
+[2025-12-22 16:25:37] INFO: Downloaded unassigned image 48: 9iafz8hxiiawll1wjbw6n0etcqrv.png
+[2025-12-22 16:25:37] INFO: Downloaded unassigned image 49: mr8143yb2wxmay0ekqynzbmutzd1.jpg
+[2025-12-22 16:25:38] INFO: Downloaded unassigned image 50: eutgt747yxwa1aj06jj14ozvpy5s.jpg
+[2025-12-22 16:25:39] INFO: Downloaded unassigned image 51: fz24vbh5pzmmf7y5ug5teoj2h7hx.jpg
+[2025-12-22 16:25:39] INFO: Downloaded unassigned image 52: qwup97sj0i34vour6plkf0qq44op.jpg
+[2025-12-22 16:25:40] INFO: Downloaded unassigned image 53: wi0eckyih333wu57myf0nzatk3mw.png
+[2025-12-22 16:25:41] INFO: Downloaded unassigned image 54: 64tkdgi6uxdgknze0evbuiflzlgh.png
+[2025-12-22 16:25:42] INFO: Downloaded unassigned image 55: kug7zfhqnhioc0zujl67gkyv2ddi.png
+[2025-12-22 16:25:44] INFO: Downloaded unassigned image 56: 5j2z4g5u1ay0ja1dgmxgqejmftn4.gif
+[2025-12-22 16:25:44] INFO: Downloaded unassigned image 57: vfl3sagssqqkgjmkbhwskrivr1k1.jpg
+[2025-12-22 16:25:44] INFO: Downloaded unassigned image 58: fj8inp7yhms4crwq1enmnehhifqp.jpg
+[2025-12-22 16:25:45] INFO: Downloaded unassigned image 59: azgfqqvh6r2sa78swi1iohwt50l2.jpg
+[2025-12-22 16:25:45] INFO: Downloaded unassigned image 60: s8b79wqq5pu4kbsxifszo7jy7urt.jpg
+[2025-12-22 16:25:46] INFO: Downloaded unassigned image 61: a6teoykps8vajferijbqv9xp836u.jpg
+[2025-12-22 16:25:46] INFO: Downloaded unassigned image 62: lsx00mt6vxym2hrehz6sjrcy7fvs.jpg
+[2025-12-22 16:25:47] INFO: Downloaded unassigned image 63: 0hg19xb4zfpxs6lnrmdyebk7oqmy.gif
+[2025-12-22 16:25:48] INFO: Downloaded unassigned image 64: tn0mckvnq90qruex520s6loly1ct.gif
+[2025-12-22 16:25:49] INFO: Downloaded unassigned image 65: f5knbgwmec9o13wg8zl0ewh7lkho.jpg
+[2025-12-22 16:25:50] INFO: Downloaded unassigned image 66: pm41immilqnya8kyjsdimwy5cz6h.jpg
+[2025-12-22 16:25:51] INFO: Downloaded unassigned image 67: du2vztq70216kfijzm4i6q6048ne.jpg
+[2025-12-22 16:25:52] INFO: Downloaded unassigned image 68: 7sggmrc1hlwsw3l96f52x79u456i.jpg
+[2025-12-22 16:25:53] INFO: Downloaded unassigned image 69: wcw7hxwym7gfrd0wl4htiwnkao5h.mp4
+[2025-12-22 16:25:53] INFO: Downloaded unassigned image 70: o3sxwu4rpypsfne3cvntwqzkpw3m.png
+[2025-12-22 16:25:54] INFO: Downloaded unassigned image 71: roh2wait64he9j09mifpea3z7p2x.png
+[2025-12-22 16:25:55] INFO: Downloaded unassigned image 72: p8yrqy01g8247h298uzu45ye7nfx.jpg
+[2025-12-22 16:25:56] INFO: Downloaded unassigned image 73: kxc200khcxkiji755tdcmnwt50ei.jpg
+[2025-12-22 16:25:56] INFO: Downloaded unassigned image 74: xdh7hampr1c2d0rb9ajbvkoe0ev8.jpg
+[2025-12-22 16:25:57] INFO: Downloaded unassigned image 75: guw23wyv2gwk5ttqn3dbm6c09jog.jpg
+[2025-12-22 16:25:57] INFO: Downloaded unassigned image 76: il5eyml6rpznwdz6n4nf4gzlvsgw.jpg
+[2025-12-22 16:25:57] INFO: Downloaded unassigned image 77: rvxagkv3szezuiqso9d0msr0qfhq.jpg
+[2025-12-22 16:25:58] INFO: Downloaded unassigned image 78: 6tnf8frcqjnqs6m0vs8ztarb780o.jpg
+[2025-12-22 16:25:58] INFO: Downloaded unassigned image 79: xo3li45gept3k9dku7vt8hojtngh.jpg
+[2025-12-22 16:25:58] INFO: Downloaded 74 missing images
+[2025-12-22 16:25:58] INFO: Failed to download 5 missing images
+[2025-12-22 16:25:58] INFO: Saved unassigned images metadata to unassigned_images.json
+[2025-12-22 16:25:58] INFO: Generating README...
+[2025-12-22 16:25:58] INFO: README generated
+[2025-12-22 16:25:58] INFO: Generating statistics...
+[2025-12-22 16:25:58] INFO: Statistics generated
+[2025-12-22 16:25:58] INFO: ============================================================
+[2025-12-22 16:25:58] INFO: Export complete!
+[2025-12-22 16:25:58] INFO: Duration: 1m 31s
+[2025-12-22 16:25:58] INFO: Location: /Users/cody/Dev/the-flying-dutchmen/export
+[2025-12-22 16:25:58] INFO: ============================================================

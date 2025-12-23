@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "¯\\_(ツ)_/¯",
+    "slug": "general",
+    "color": "#4ea1d3",
+    "created_at": "2021-10-15 07:27:44 +0900",
+    "updated_at": "2021-11-03 15:56:48 +0900"
+  },
+  {
+    "id": 2,
+    "name": "Board Games",
+    "slug": "board_games",
+    "color": "#16bc9c",
+    "created_at": "2021-10-15 07:27:44 +0900",
+    "updated_at": "2021-11-02 11:34:36 +0900"
+  },
+  {
+    "id": 3,
+    "name": "Development",
+    "slug": "development",
+    "color": "#adfc03",
+    "created_at": "2021-10-18 09:55:18 +0900",
+    "updated_at": "2021-10-18 09:55:18 +0900"
+  },
+  {
+    "id": 4,
+    "name": "Reality",
+    "slug": "reality",
+    "color": "#03fcc6",
+    "created_at": "2021-10-31 19:12:01 +0900",
+    "updated_at": "2021-11-04 07:02:59 +0900"
+  },
+  {
+    "id": 5,
+    "name": "Money",
+    "slug": "money",
+    "color": "#007a14",
+    "created_at": "2021-11-02 09:51:04 +0900",
+    "updated_at": "2021-11-02 09:51:16 +0900"
+  },
+  {
+    "id": 6,
+    "name": "Music",
+    "slug": "music",
+    "color": "#f55a42",
+    "created_at": "2021-11-02 11:32:40 +0900",
+    "updated_at": "2021-11-02 11:32:40 +0900"
+  },
+  {
+    "id": 7,
+    "name": "Politics",
+    "slug": "politics",
+    "color": "#fcfcfc",
+    "created_at": "2024-09-07 16:43:46 +0900",
+    "updated_at": "2024-09-07 16:43:46 +0900"
+  }
+]

@@ -1,15 +1,18 @@
 {
-  "export_date": "2025-12-21T02:21:10Z",
-  "duration_seconds": 3.51,
+  "export_date": "2025-12-22T07:25:58Z",
+  "duration_seconds": 90.62,
   "counts": {
     "users": 4,
     "categories": 7,
     "threads": 23,
-    "posts": 366
+    "posts": 366,
+    "orphaned_images": 74
   },
   "images": {
     "downloaded": 3,
-    "failed": 0
+    "failed": 0,
+    "orphaned_downloaded": 74,
+    "orphaned_failed": 5
   },
   "attachment_mapping": {
   }
